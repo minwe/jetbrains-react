@@ -2,7 +2,7 @@
 
 React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/Minwe/phpstorm-reactjs).
 
-## Installtion
+## Installation
 
 1. Download and copy the xml file to your templates folder:
 
