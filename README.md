@@ -60,19 +60,19 @@ $START$ = React.createClass({
 ### `cdm`
 
 ```js
-  componentDidMount: function() {
-    
-  },
-  
+componentDidMount: function() {
+
+},
+
 ```
 
 ### `cdup`
 
 ```js
-  componentDidUpdate: function(prevProps, prevState) {
-    
-  },
-  
+componentDidUpdate: function(prevProps, prevState) {
+
+},
+
 ```
 
 ### `cwm`
@@ -210,4 +210,3 @@ this.setState({
 ```
 this.state.$END$
 ```
-
