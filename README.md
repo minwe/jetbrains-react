@@ -32,7 +32,7 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 
 var React = require('react');
 
-var MyComponent = React.createClass({
+var $class$ = React.createClass({
   render: function() {
     return (
       <div />
@@ -40,7 +40,7 @@ var MyComponent = React.createClass({
   }
 });
 
-module.exports = MyComponent;
+module.exports = $class$;
 
 ```
 
@@ -166,7 +166,7 @@ propTypes: {
 
 ```
 
-**`rp`**:
+**`rp`**
 
 ```js
 $SART$: React.PropTypes.$END$
@@ -207,6 +207,6 @@ this.setState({
 ```
 ### `state`
 
-```
+```js
 this.state.$END$
 ```
