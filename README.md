@@ -14,7 +14,7 @@ React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPS
 
 2. Restart your IDE.
 
-3. To see all templates, go to `Preferences` -> `Live Templates` and expand the `ReactJS` Template Group.
+3. To see all templates, go to `Preferences` -> `Live Templates` and expand the `ReactES5` Template Group.
 
 
 ## Usage
