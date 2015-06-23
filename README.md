@@ -4,7 +4,14 @@ React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPS
 
 ## Installation
 
-1. Download and copy the xml file to your templates folder:
+### Importing
+
+1. Download `jetbrains-react.jar`;
+2. Click `File` -> `Importing Settings...` on your IDE menubar, select `jetbrains-react.jar`, then click `OK`.
+
+### Manually
+
+1. Download and copy the `jetbrains/templates/ReactES5.xml` file to your templates folder:
 
   - Windows: `<your home directory>\.<product name><version number>\config\templates`
   - Linux: `~\.<product name><version number>\config\templates`

@@ -1,0 +1,29 @@
+{
+  "name": "jetbrains-react",
+  "version": "0.0.1",
+  "description": "React snippets(live templates) for JetBrains series editors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Minwe/jetbrains-react.git"
+  },
+  "keywords": [
+    "React",
+    "JetBrains",
+    "live-templates",
+    "snippets"
+  ],
+  "author": "minwe <hegfirose@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Minwe/jetbrains-react/issues"
+  },
+  "homepage": "https://github.com/Minwe/jetbrains-react#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-zip": "^3.0.2"
+  }
+}
