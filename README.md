@@ -69,6 +69,26 @@ module.exports = $class$;
 
 ```
 
+### `rcls`
+
+```js
+import React from 'react';
+
+class $class$ extends React.Component {
+  render() {
+    return (
+      <div />
+    );
+  }
+}
+
+$class$.propTypes = {};
+$class$.defaultProps = {};
+
+export default $class$;
+
+```
+
 ### `rccc`
 
 ```js

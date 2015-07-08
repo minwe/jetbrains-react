@@ -28,6 +28,20 @@
     </context>
   </template>
   <template
+      name="rcls"
+      value="import React from 'react';&#10;&#10;class $class$ extends React.Component {&#10;  render() {&#10;    return (&#10;      &lt;div /&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$class$.propTypes = {};&#10;$class$.defaultProps = {};&#10;&#10;export default $class$;&#10;"
+      description="Create a ES2015 class"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="class" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="rccc"
       value="$START$ = React.createClass({&#10; render() {&#10;   return (&#10;     $END$&#10;   );&#10; }&#10;});&#10;"
       description="Create a sub component"

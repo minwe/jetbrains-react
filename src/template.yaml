@@ -1,21 +1,21 @@
 # Create component
 rcc:
- description: Create a React.js component
- tpl:
-   next: |
-    import React from 'react';
+  description: Create a React.js component
+  tpl:
+    next: |
+      import React from 'react';
 
-    const $class$ = React.createClass({
-      render() {
-        return (
-          <div />
-        );
-      }
-    });
+      const $class$ = React.createClass({
+        render() {
+          return (
+            <div />
+          );
+        }
+      });
 
-    export default $class$;
+      export default $class$;
 
-   es5: |
+    es5: |
       'use strict';
 
       var React = require('react');
@@ -30,8 +30,30 @@ rcc:
 
       module.exports = $class$;
 
- variables:
-   - {name: 'class', expression: 'complete()'}
+  variables:
+    - {name: 'class', expression: 'complete()'}
+
+# https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#plain-javascript-classes
+rcls:
+  description: Create a ES2015 class
+  tpl: |
+    import React from 'react';
+
+    class $class$ extends React.Component {
+      render() {
+        return (
+          <div />
+        );
+      }
+    }
+
+    $class$.propTypes = {};
+    $class$.defaultProps = {};
+
+    export default $class$;
+
+  variables:
+    - {name: 'class', expression: 'complete()'}
 
 # Nested component
 rccc:
