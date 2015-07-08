@@ -303,7 +303,7 @@ propTypes: {
 ### `rp`
 
 ```js
-$SART$: React.PropTypes.$END$
+$START$: React.PropTypes.$END$
 ```
 
 ### `refs`

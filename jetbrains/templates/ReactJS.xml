@@ -47,6 +47,7 @@
       description="Create a sub component"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -60,6 +61,7 @@
       description="Create a sub component"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -281,6 +283,7 @@
       description="getInitialState"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -294,6 +297,7 @@
       description="getInitialState"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -333,6 +337,7 @@
       description="propTypes"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -342,10 +347,11 @@
   </template>
   <template
       name="rp"
-      value="$SART$: React.PropTypes.$END$"
+      value="$START$: React.PropTypes.$END$"
       description="React.PropTypes."
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -424,6 +430,7 @@
       description="this.setState"
       toReformat="false"
       toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />

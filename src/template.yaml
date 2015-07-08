@@ -67,6 +67,9 @@ rccc:
      }
     });
 
+  variables:
+    - {name: 'START'}
+
 # cdm
 cdm:
   description: componentDidMount
@@ -144,6 +147,9 @@ gis:
       };
     },
 
+  variables:
+    - {name: 'START'}
+
 # isMounted
 ism:
   tpl: isMounted()
@@ -160,10 +166,15 @@ pt:
       $START$: React.PropTypes.$END$
     },
 
+  variables:
+    - {name: 'START'}
+
 # PropType
 rp:
   description: React.PropTypes.
-  tpl: "$SART$: React.PropTypes.$END$"
+  tpl: "$START$: React.PropTypes.$END$"
+  variables:
+    - {name: 'START'}
 
 refs:
   tpl: this.refs.$END$
@@ -193,6 +204,8 @@ sst:
     this.setState({
       $START$: $END$
     });
+  variables:
+    - {name: 'START'}
 
 #
 state:
