@@ -11,8 +11,8 @@
     "url": "git+https://github.com/Minwe/jetbrains-react.git"
   },
   "keywords": [
-    "React",
     "JetBrains",
+    "React",
     "live-templates",
     "snippets"
   ],
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/Minwe/jetbrains-react#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-zip": "^3.0.2"
+    "gulp-zip": "^3.0.2",
+    "handlebars": "^3.0.3",
+    "js-yaml": "^3.3.1"
   }
 }

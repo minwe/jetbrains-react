@@ -1,0 +1,177 @@
+# Create component
+rcc:
+ description: Create a React.js component
+ tpl:
+   next: |
+    import React from 'react';
+
+    const $class$ = React.createClass({
+      render() {
+        return (
+          <div />
+        );
+      }
+    });
+
+    export default $class$;
+
+   es5: |
+      'use strict';
+
+      var React = require('react');
+
+      var $class$ = React.createClass({
+       render: function() {
+         return (
+           <div />
+         );
+       }
+      });
+
+      module.exports = $class$;
+
+ variables:
+   - {name: 'class', expression: 'complete()'}
+
+# Nested component
+rccc:
+  description: Create a sub component
+  tpl: |
+    $START$ = React.createClass({
+     render: function() {
+       return (
+         $END$
+       );
+     }
+    });
+
+# cdm
+cdm:
+  description: componentDidMount
+  tpl: |
+    componentDidMount: function() {
+      $END$
+    },
+
+# cdu
+cdu:
+  description: componentDidUpdate
+  tpl: |
+    componentDidUpdate: function(prevProps, prevState) {
+      $END$
+    },
+
+# cwm
+cwm:
+  description: componentWillMount
+  tpl: |
+    componentWillMount: function() {
+      $END$
+    },
+
+# cwr
+cwr:
+  description: componentWillReceiveProps
+  tpl: |
+    componentWillReceiveProps: function(nextProps) {
+      $END$
+    },
+
+#cwu
+cwu:
+  description: componentWillUpdate
+  tpl: |
+    componentWillUpdate: function(nextProps, nextState) {
+      $END$
+    },
+
+#cwum
+cwum:
+  description: componentWillUnmount
+  tpl: |
+    componentWillUnmount: function() {
+      $END$
+    },
+
+# ReactDOM.findDOMNode
+fdn:
+  description: ReactDOM.findDOMNode
+  tpl: ReactDOM.findDOMNode($END$);
+
+fup:
+  description: forceUpdate();
+  tpl: forceUpdate($END$);
+
+#gdp
+gdp:
+  description: getDefaultProps
+  tpl: |
+    getDefaultProps: function() {
+      return {
+        $END$
+      };
+    },
+
+# getInitialState
+gis:
+  description: getInitialState
+  tpl: |
+    getInitialState: function() {
+      return {
+        $START$: $END$
+      };
+    },
+
+# isMounted
+ism:
+  tpl: isMounted()
+
+#
+props:
+  tpl: this.props
+
+# propTypes
+pt:
+  description: propTypes
+  tpl: |
+    propTypes: {
+      $START$: React.PropTypes.$END$
+    },
+
+# PropType
+rp:
+  description: React.PropTypes.
+  tpl: "$SART$: React.PropTypes.$END$"
+
+refs:
+  tpl: this.refs.$END$
+
+# render
+ren:
+  description: render()
+  tpl: |
+    render: function() {
+      return (
+        <div />$END$
+      );
+    }
+
+# shouldComponentUpdate
+scu:
+  description: shouldComponentUpdate
+  tpl: |
+    shouldComponentUpdate: function(nextProps, nextState) {
+      $END$
+    },
+
+# sst
+sst:
+  description: this.setState
+  tpl: |
+    this.setState({
+      $START$: $END$
+    });
+
+#
+state:
+  tpl: this.state.$END$

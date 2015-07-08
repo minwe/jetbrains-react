@@ -9,9 +9,9 @@ React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPS
 1. Download `jetbrains-react.jar`;
 2. Click `File` -> `Importing Settings...` on your IDE menubar, select `jetbrains-react.jar`, then click `OK`.
 
-### Manually
+### Install Manually
 
-1. Download and copy the `jetbrains/templates/ReactES5.xml` file to your templates folder:
+1. Download and copy the `jetbrains/templates/ReactJS.xml` file to your templates folder:
 
   - Windows: `<your home directory>\.<product name><version number>\config\templates`
   - Linux: `~\.<product name><version number>\config\templates`
@@ -21,7 +21,7 @@ React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPS
 
 2. Restart your IDE.
 
-3. To see all templates, go to `Preferences` -> `Live Templates` and expand the `ReactES5` Template Group.
+3. To see all templates, go to `Preferences` -> `Live Templates` and expand the `ReactJS` Template Group.
 
 
 ## Usage
@@ -32,7 +32,25 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 
 **Documentation of available snippets (JSX):**
 
+<!--DOC_START-->
 ### `rcc`
+
+```js
+import React from 'react';
+
+const $class$ = React.createClass({
+  render() {
+    return (
+      <div />
+    );
+  }
+});
+
+export default $class$;
+
+```
+
+### `rcc5`
 
 ```js
 'use strict';
@@ -40,18 +58,31 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 var React = require('react');
 
 var $class$ = React.createClass({
-  render: function() {
-    return (
-      <div />
-    );
-  }
+ render: function() {
+   return (
+     <div />
+   );
+ }
 });
 
 module.exports = $class$;
 
 ```
 
-Nested component **`rccc`**:
+### `rccc`
+
+```js
+$START$ = React.createClass({
+ render() {
+   return (
+     $END$
+   );
+ }
+});
+
+```
+
+### `rccc5`
 
 ```js
 $START$ = React.createClass({
@@ -67,22 +98,49 @@ $START$ = React.createClass({
 ### `cdm`
 
 ```js
-componentDidMount: function() {
-
+componentDidMount() {
+  $END$
 },
 
 ```
 
-### `cdup`
+### `cdm5`
+
+```js
+componentDidMount: function() {
+  $END$
+},
+
+```
+
+### `cdu`
+
+```js
+componentDidUpdate(prevProps, prevState) {
+  $END$
+},
+
+```
+
+### `cdu5`
 
 ```js
 componentDidUpdate: function(prevProps, prevState) {
-
+  $END$
 },
 
 ```
 
 ### `cwm`
+
+```js
+componentWillMount() {
+  $END$
+},
+
+```
+
+### `cwm5`
 
 ```js
 componentWillMount: function() {
@@ -94,12 +152,31 @@ componentWillMount: function() {
 ### `cwr`
 
 ```js
+componentWillReceiveProps(nextProps) {
+  $END$
+},
+
+```
+
+### `cwr5`
+
+```js
 componentWillReceiveProps: function(nextProps) {
   $END$
 },
-  
+
 ```
+
 ### `cwu`
+
+```js
+componentWillUpdate(nextProps, nextState) {
+  $END$
+},
+
+```
+
+### `cwu5`
 
 ```js
 componentWillUpdate: function(nextProps, nextState) {
@@ -108,29 +185,48 @@ componentWillUpdate: function(nextProps, nextState) {
 
 ```
 
-### `cwun`
+### `cwum`
+
+```js
+componentWillUnmount() {
+  $END$
+},
+
+```
+
+### `cwum5`
 
 ```js
 componentWillUnmount: function() {
   $END$
 },
 
-
 ```
 
 ### `fdn`
 
 ```js
-React.findDOMNode($END$);
+ReactDOM.findDOMNode($END$);
 ```
 
 ### `fup`
 
 ```js
-forceUpdate(...)
+forceUpdate($END$);
 ```
 
 ### `gdp`
+
+```js
+getDefaultProps() {
+  return {
+    $END$
+  };
+},
+
+```
+
+### `gdp5`
 
 ```js
 getDefaultProps: function() {
@@ -144,13 +240,24 @@ getDefaultProps: function() {
 ### `gis`
 
 ```js
-getInitialState: function() {
+getInitialState() {
   return {
-    $START$: $END$ 
+    $START$: $END$
   };
 },
 
-```  
+```
+
+### `gis5`
+
+```js
+getInitialState: function() {
+  return {
+    $START$: $END$
+  };
+},
+
+```
 
 ### `ism`
 
@@ -161,7 +268,7 @@ isMounted()
 ### `props`
 
 ```js
-this.props.
+this.props
 ```
 
 ### `pt`
@@ -173,7 +280,7 @@ propTypes: {
 
 ```
 
-**`rp`**
+### `rp`
 
 ```js
 $SART$: React.PropTypes.$END$
@@ -188,6 +295,17 @@ this.refs.$END$
 ### `ren`
 
 ```js
+render() {
+  return (
+    <div />$END$
+  );
+}
+
+```
+
+### `ren5`
+
+```js
 render: function() {
   return (
     <div />$END$
@@ -197,6 +315,15 @@ render: function() {
 ```
 
 ### `scu`
+
+```js
+shouldComponentUpdate(nextProps, nextState) {
+  $END$
+},
+
+```
+
+### `scu5`
 
 ```js
 shouldComponentUpdate: function(nextProps, nextState) {
@@ -209,11 +336,16 @@ shouldComponentUpdate: function(nextProps, nextState) {
 
 ```js
 this.setState({
-  $START$: $END$ 
+  $START$: $END$
 });
+
 ```
+
 ### `state`
 
 ```js
 this.state.$END$
 ```
+
+
+<!--DOC_END-->

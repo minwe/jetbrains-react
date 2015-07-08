@@ -1,0 +1,433 @@
+<templateSet group="ReactJS">
+  <template
+      name="rcc"
+      value="import React from 'react';&#10;&#10;const $class$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div /&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $class$;&#10;"
+      description="Create a React.js component"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="class" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rcc5"
+      value="'use strict';&#10;&#10;var React = require('react');&#10;&#10;var $class$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     &lt;div /&gt;&#10;   );&#10; }&#10;});&#10;&#10;module.exports = $class$;&#10;"
+      description="Create a React.js component"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="class" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rccc"
+      value="$START$ = React.createClass({&#10; render() {&#10;   return (&#10;     $END$&#10;   );&#10; }&#10;});&#10;"
+      description="Create a sub component"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rccc5"
+      value="$START$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     $END$&#10;   );&#10; }&#10;});&#10;"
+      description="Create a sub component"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdm"
+      value="componentDidMount() {&#10;  $END$&#10;},&#10;"
+      description="componentDidMount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdm5"
+      value="componentDidMount: function() {&#10;  $END$&#10;},&#10;"
+      description="componentDidMount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdu"
+      value="componentDidUpdate(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
+      description="componentDidUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdu5"
+      value="componentDidUpdate: function(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
+      description="componentDidUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwm"
+      value="componentWillMount() {&#10;  $END$&#10;},&#10;"
+      description="componentWillMount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwm5"
+      value="componentWillMount: function() {&#10;  $END$&#10;},&#10;"
+      description="componentWillMount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwr"
+      value="componentWillReceiveProps(nextProps) {&#10;  $END$&#10;},&#10;"
+      description="componentWillReceiveProps"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwr5"
+      value="componentWillReceiveProps: function(nextProps) {&#10;  $END$&#10;},&#10;"
+      description="componentWillReceiveProps"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwu"
+      value="componentWillUpdate(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      description="componentWillUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwu5"
+      value="componentWillUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      description="componentWillUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwum"
+      value="componentWillUnmount() {&#10;  $END$&#10;},&#10;"
+      description="componentWillUnmount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cwum5"
+      value="componentWillUnmount: function() {&#10;  $END$&#10;},&#10;"
+      description="componentWillUnmount"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="fdn"
+      value="ReactDOM.findDOMNode($END$);"
+      description="ReactDOM.findDOMNode"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="fup"
+      value="forceUpdate($END$);"
+      description="forceUpdate();"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gdp"
+      value="getDefaultProps() {&#10;  return {&#10;    $END$&#10;  };&#10;},&#10;"
+      description="getDefaultProps"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gdp5"
+      value="getDefaultProps: function() {&#10;  return {&#10;    $END$&#10;  };&#10;},&#10;"
+      description="getDefaultProps"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gis"
+      value="getInitialState() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      description="getInitialState"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gis5"
+      value="getInitialState: function() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      description="getInitialState"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ism"
+      value="isMounted()"
+      description="isMounted()"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="props"
+      value="this.props"
+      description="this.props"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="pt"
+      value="propTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      description="propTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rp"
+      value="$SART$: React.PropTypes.$END$"
+      description="React.PropTypes."
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="refs"
+      value="this.refs.$END$"
+      description="this.refs.$END$"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ren"
+      value="render() {&#10;  return (&#10;    &lt;div /&gt;$END$&#10;  );&#10;}&#10;"
+      description="render()"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ren5"
+      value="render: function() {&#10;  return (&#10;    &lt;div /&gt;$END$&#10;  );&#10;}&#10;"
+      description="render()"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="scu"
+      value="shouldComponentUpdate(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      description="shouldComponentUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="scu5"
+      value="shouldComponentUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      description="shouldComponentUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="sst"
+      value="this.setState({&#10;  $START$: $END$&#10;});&#10;"
+      description="this.setState"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="state"
+      value="this.state.$END$"
+      description="this.state.$END$"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
