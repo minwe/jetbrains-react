@@ -60,11 +60,11 @@ rccc:
   description: Create a sub component
   tpl: |
     $START$ = React.createClass({
-     render: function() {
-       return (
-         $END$
-       );
-     }
+      render: function() {
+        return (
+          $END$
+        );
+      }
     });
 
   variables:

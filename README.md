@@ -93,11 +93,11 @@ export default $class$;
 
 ```js
 $START$ = React.createClass({
- render() {
-   return (
-     $END$
-   );
- }
+  render() {
+    return (
+      $END$
+    );
+  }
 });
 
 ```
@@ -106,11 +106,11 @@ $START$ = React.createClass({
 
 ```js
 $START$ = React.createClass({
- render: function() {
-   return (
-     $END$
-   );
- }
+  render: function() {
+    return (
+      $END$
+    );
+  }
 });
 
 ```

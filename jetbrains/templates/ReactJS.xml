@@ -43,7 +43,7 @@
   </template>
   <template
       name="rccc"
-      value="$START$ = React.createClass({&#10; render() {&#10;   return (&#10;     $END$&#10;   );&#10; }&#10;});&#10;"
+      value="$START$ = React.createClass({&#10;  render() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
       description="Create a sub component"
       toReformat="false"
       toShortenFQNames="true">
@@ -57,7 +57,7 @@
   </template>
   <template
       name="rccc5"
-      value="$START$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     $END$&#10;   );&#10; }&#10;});&#10;"
+      value="$START$ = React.createClass({&#10;  render: function() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
       description="Create a sub component"
       toReformat="false"
       toShortenFQNames="true">
