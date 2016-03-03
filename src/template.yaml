@@ -233,6 +233,11 @@ cct:
   variables:
     - {name: 'START'}
 
+# this.context
+ctx:
+  description: this.context
+  tpl: this.context.$END$
+
 # getChildContext
 gcc:
   description: getChildContext

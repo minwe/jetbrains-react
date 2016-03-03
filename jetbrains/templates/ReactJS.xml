@@ -480,6 +480,19 @@
     </context>
   </template>
   <template
+      name="ctx"
+      value="this.context.$END$"
+      description="this.context"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="gcc"
       value="getChildContext() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
       description="getChildContext"

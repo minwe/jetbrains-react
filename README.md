@@ -385,6 +385,12 @@ childContextTypes: {
 
 ```
 
+### `ctx`
+
+```js
+this.context.$END$
+```
+
 ### `gcc`
 
 ```js
