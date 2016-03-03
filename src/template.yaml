@@ -210,3 +210,38 @@ sst:
 #
 state:
   tpl: this.state.$END$
+
+# context
+ct:
+  description: contextTypes
+  tpl: |
+    contextTypes: {
+      $START$: React.PropTypes.$END$
+    },
+
+  variables:
+    - {name: 'START'}
+
+# childContextTypes
+cct:
+  description: childContextTypes
+  tpl: |
+    childContextTypes: {
+      $START$: React.PropTypes.$END$
+    },
+
+  variables:
+    - {name: 'START'}
+
+# getChildContext
+gcc:
+  description: getChildContext
+  tpl: |
+    getChildContext: function() {
+      return {
+        $START$: $END$
+      };
+    },
+
+  variables:
+    - {name: 'START'}

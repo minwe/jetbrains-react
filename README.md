@@ -367,5 +367,45 @@ this.setState({
 this.state.$END$
 ```
 
+### `ct`
+
+```js
+contextTypes: {
+  $START$: React.PropTypes.$END$
+},
+
+```
+
+### `cct`
+
+```js
+childContextTypes: {
+  $START$: React.PropTypes.$END$
+},
+
+```
+
+### `gcc`
+
+```js
+getChildContext() {
+  return {
+    $START$: $END$
+  };
+},
+
+```
+
+### `gcc5`
+
+```js
+getChildContext: function() {
+  return {
+    $START$: $END$
+  };
+},
+
+```
+
 
 <!--DOC_END-->

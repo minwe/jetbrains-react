@@ -1,6 +1,6 @@
 {
   "name": "jetbrains-react",
-  "version": "0.0.1",
+  "version": "2.1.0",
   "description": "React snippets(live templates) for JetBrains series editors.",
   "main": "index.js",
   "scripts": {
@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/Minwe/jetbrains-react#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-zip": "^3.0.2",
-    "handlebars": "^3.0.3",
-    "js-yaml": "^3.3.1"
+    "gulp": "^3.9.1",
+    "gulp-zip": "^3.2.0",
+    "handlebars": "^4.0.5",
+    "js-yaml": "^3.5.3"
   }
 }

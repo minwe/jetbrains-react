@@ -451,4 +451,60 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
+  <template
+      name="ct"
+      value="contextTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      description="contextTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cct"
+      value="childContextTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      description="childContextTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gcc"
+      value="getChildContext() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      description="getChildContext"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gcc5"
+      value="getChildContext: function() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      description="getChildContext"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
