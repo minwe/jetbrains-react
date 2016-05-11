@@ -11,6 +11,7 @@ var docTpl = Handlebars.compile(fs.readFileSync('src/doc.hbs', 'utf8'));
 var readme = fs.readFileSync('README.md', 'utf8');
 
 var templates = yaml.safeLoad(fs.readFileSync('src/template.yaml', 'utf8'));
+var eventsTpl = yaml.safeLoad(fs.readFileSync('src/envents.yaml', 'utf8'));
 
 var processTpl = function(tpl) {
   tpl = JSON.stringify(tpl);
@@ -26,7 +27,7 @@ for (var k in templates) {
   if (templates.hasOwnProperty(k)) {
     var t = templates[k];
     var tpl = t.tpl.next || t.tpl;
-    tpl = tpl.replace(/: function/g, '');
+    tpl = tpl.replace(/: function/g, '').replace(/},/g, '}');
 
     var snippet = {
       name: k,
@@ -54,6 +55,24 @@ for (var k in templates) {
     }
   }
 }
+
+function processEnventsTpl(eventsMap) {
+  for (var key in eventsMap) {
+    if (eventsMap.hasOwnProperty(key)) {
+      var tplName = eventsMap[key];
+      var tpl = `${key}={$END$}`;
+      data.push({
+        name: tplName,
+        description: key,
+        tpl: JSON.stringify(tpl),
+        tplRaw: tpl
+      });
+      
+    }
+  }
+}
+
+processEnventsTpl(eventsTpl);
 
 fs.writeFileSync('jetbrains/templates/ReactJS.xml', template(data));
 fs.writeFileSync('README.md', readme.replace(

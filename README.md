@@ -36,12 +36,15 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 ### `rcc`
 
 ```js
-import React from 'react';
+import React, {
+  Component,
+  PropTypes,
+} from 'react';
 
 const $class$ = React.createClass({
   render() {
     return (
-      <div />
+      <div>$END$</div>
     );
   }
 });
@@ -56,11 +59,12 @@ export default $class$;
 'use strict';
 
 var React = require('react');
+var PropTypes = PropTypes;
 
 var $class$ = React.createClass({
  render: function() {
    return (
-     <div />
+     <div>$END$</div>
    );
  }
 });
@@ -72,12 +76,15 @@ module.exports = $class$;
 ### `rcls`
 
 ```js
-import React from 'react';
+import React, {
+  Component,
+  PropTypes,
+} from 'react';
 
-class $class$ extends React.Component {
+class $class$ extends Component {
   render() {
     return (
-      <div />
+      <div>$END$</div>
     );
   }
 }
@@ -120,7 +127,7 @@ $START$ = React.createClass({
 ```js
 componentDidMount() {
   $END$
-},
+}
 
 ```
 
@@ -136,16 +143,16 @@ componentDidMount: function() {
 ### `cdu`
 
 ```js
-componentDidUpdate(prevProps, prevState) {
+componentDidUpdate(prevProps, prevState, prevContext) {
   $END$
-},
+}
 
 ```
 
 ### `cdu5`
 
 ```js
-componentDidUpdate: function(prevProps, prevState) {
+componentDidUpdate: function(prevProps, prevState, prevContext) {
   $END$
 },
 
@@ -156,7 +163,7 @@ componentDidUpdate: function(prevProps, prevState) {
 ```js
 componentWillMount() {
   $END$
-},
+}
 
 ```
 
@@ -172,16 +179,16 @@ componentWillMount: function() {
 ### `cwr`
 
 ```js
-componentWillReceiveProps(nextProps) {
+componentWillReceiveProps(nextProps, nextContext) {
   $END$
-},
+}
 
 ```
 
 ### `cwr5`
 
 ```js
-componentWillReceiveProps: function(nextProps) {
+componentWillReceiveProps: function(nextProps, nextContext) {
   $END$
 },
 
@@ -190,16 +197,16 @@ componentWillReceiveProps: function(nextProps) {
 ### `cwu`
 
 ```js
-componentWillUpdate(nextProps, nextState) {
+componentWillUpdate(nextProps, nextState, nextContext) {
   $END$
-},
+}
 
 ```
 
 ### `cwu5`
 
 ```js
-componentWillUpdate: function(nextProps, nextState) {
+componentWillUpdate: function(nextProps, nextState, nextContext) {
   $END$
 },
 
@@ -210,7 +217,7 @@ componentWillUpdate: function(nextProps, nextState) {
 ```js
 componentWillUnmount() {
   $END$
-},
+}
 
 ```
 
@@ -224,6 +231,12 @@ componentWillUnmount: function() {
 ```
 
 ### `fdn`
+
+```js
+findDOMNode($END$);
+```
+
+### `rfdn`
 
 ```js
 ReactDOM.findDOMNode($END$);
@@ -242,7 +255,7 @@ getDefaultProps() {
   return {
     $END$
   };
-},
+}
 
 ```
 
@@ -264,7 +277,7 @@ getInitialState() {
   return {
     $START$: $END$
   };
-},
+}
 
 ```
 
@@ -291,19 +304,25 @@ isMounted()
 this.props
 ```
 
-### `pt`
+### `dsih`
+
+```js
+dangerouslySetInnerHTML={__html: '$END$'}
+```
+
+### `pts`
 
 ```js
 propTypes: {
-  $START$: React.PropTypes.$END$
-},
+  $START$: PropTypes.$END$
+}
 
 ```
 
-### `rp`
+### `pt`
 
 ```js
-$START$: React.PropTypes.$END$
+$START$: PropTypes.$END$
 ```
 
 ### `refs`
@@ -317,7 +336,7 @@ this.refs.$END$
 ```js
 render() {
   return (
-    <div />$END$
+    <div>$END$</div>
   );
 }
 
@@ -328,7 +347,7 @@ render() {
 ```js
 render: function() {
   return (
-    <div />$END$
+    <div>$END$</div>
   );
 }
 
@@ -337,16 +356,16 @@ render: function() {
 ### `scu`
 
 ```js
-shouldComponentUpdate(nextProps, nextState) {
+shouldComponentUpdate(nextProps, nextState, nextContext) {
   $END$
-},
+}
 
 ```
 
 ### `scu5`
 
 ```js
-shouldComponentUpdate: function(nextProps, nextState) {
+shouldComponentUpdate: function(nextProps, nextState, nextContext) {
   $END$
 },
 
@@ -371,8 +390,8 @@ this.state.$END$
 
 ```js
 contextTypes: {
-  $START$: React.PropTypes.$END$
-},
+  $START$: PropTypes.$END$
+}
 
 ```
 
@@ -380,8 +399,8 @@ contextTypes: {
 
 ```js
 childContextTypes: {
-  $START$: React.PropTypes.$END$
-},
+  $START$: PropTypes.$END$
+}
 
 ```
 
@@ -398,7 +417,7 @@ getChildContext() {
   return {
     $START$: $END$
   };
-},
+}
 
 ```
 
@@ -411,6 +430,453 @@ getChildContext: function() {
   };
 },
 
+```
+
+### `spt`
+
+```js
+static propTypes = {
+  $START$: PropTypes.$END$
+};
+
+```
+
+### `sdp`
+
+```js
+static defaultProps = {
+  $START$: PropTypes.$END$
+};
+
+```
+
+### `sct`
+
+```js
+static contextTypes = {
+  $START$: PropTypes.$END$
+};
+
+```
+
+### `scct`
+
+```js
+static childContextTypes = {
+  $START$: PropTypes.$END$
+};
+
+```
+
+### `csttr`
+
+```js
+constructor(props, context$START$) {
+  super(props, context$END$);
+}
+
+```
+
+### `oncp`
+
+```js
+onCopy={$END$}
+```
+
+### `onct`
+
+```js
+onCut={$END$}
+```
+
+### `onpt`
+
+```js
+onPaste={$END$}
+```
+
+### `oncpse`
+
+```js
+onCompositionEnd={$END$}
+```
+
+### `oncpss`
+
+```js
+onCompositionStart={$END$}
+```
+
+### `oncpsu`
+
+```js
+onCompositionUpdate={$END$}
+```
+
+### `onkd`
+
+```js
+onKeyDown={$END$}
+```
+
+### `onps`
+
+```js
+onKeyPress={$END$}
+```
+
+### `onku`
+
+```js
+onKeyUp={$END$}
+```
+
+### `onfs`
+
+```js
+onFocus={$END$}
+```
+
+### `onbl`
+
+```js
+onBlur={$END$}
+```
+
+### `oncg`
+
+```js
+onChange={$END$}
+```
+
+### `onip`
+
+```js
+onInput={$END$}
+```
+
+### `onsb`
+
+```js
+onSubmit={$END$}
+```
+
+### `onc`
+
+```js
+onClick={$END$}
+```
+
+### `oncm`
+
+```js
+onContextMenu={$END$}
+```
+
+### `ondc`
+
+```js
+onDoubleClick={$END$}
+```
+
+### `ondg`
+
+```js
+onDrag={$END$}
+```
+
+### `ondge`
+
+```js
+onDragEnd={$END$}
+```
+
+### `ondgetr`
+
+```js
+onDragEnter={$END$}
+```
+
+### `ondget`
+
+```js
+onDragExit={$END$}
+```
+
+### `ondgl`
+
+```js
+onDragLeave={$END$}
+```
+
+### `ondgo`
+
+```js
+onDragOver={$END$}
+```
+
+### `ondgst`
+
+```js
+onDragStart={$END$}
+```
+
+### `ondp`
+
+```js
+onDrop={$END$}
+```
+
+### `onmd`
+
+```js
+onMouseDown={$END$}
+```
+
+### `onme`
+
+```js
+onMouseEnter={$END$}
+```
+
+### `onml`
+
+```js
+onMouseLeave={$END$}
+```
+
+### `onmm`
+
+```js
+onMouseMove={$END$}
+```
+
+### `onmot`
+
+```js
+onMouseOut={$END$}
+```
+
+### `onmov`
+
+```js
+onMouseOver={$END$}
+```
+
+### `onmu`
+
+```js
+onMouseUp={$END$}
+```
+
+### `onsl`
+
+```js
+onSelect={$END$}
+```
+
+### `ontc`
+
+```js
+onTouchCancel={$END$}
+```
+
+### `onte`
+
+```js
+onTouchEnd={$END$}
+```
+
+### `ontm`
+
+```js
+onTouchMove={$END$}
+```
+
+### `onts`
+
+```js
+onTouchStart={$END$}
+```
+
+### `onsl`
+
+```js
+onScroll={$END$}
+```
+
+### `onwl`
+
+```js
+onWheel={$END$}
+```
+
+### `onabt`
+
+```js
+onAbort={$END$}
+```
+
+### `oncpl`
+
+```js
+onCanPlay={$END$}
+```
+
+### `oncpt`
+
+```js
+onCanPlayThrough={$END$}
+```
+
+### `ondc`
+
+```js
+onDurationChange={$END$}
+```
+
+### `onempt`
+
+```js
+onEmptied={$END$}
+```
+
+### `onekpt`
+
+```js
+onEncrypted={$END$}
+```
+
+### `onend`
+
+```js
+onEnded={$END$}
+```
+
+### `onldd`
+
+```js
+onLoadedData={$END$}
+```
+
+### `onldmd`
+
+```js
+onLoadedMetadata={$END$}
+```
+
+### `onls`
+
+```js
+onLoadStart={$END$}
+```
+
+### `onpaus`
+
+```js
+onPause={$END$}
+```
+
+### `opl`
+
+```js
+onPlay={$END$}
+```
+
+### `onplg`
+
+```js
+onPlaying={$END$}
+```
+
+### `onpgs`
+
+```js
+onProgress={$END$}
+```
+
+### `onrc`
+
+```js
+onRateChange={$END$}
+```
+
+### `onsked`
+
+```js
+onSeeked={$END$}
+```
+
+### `onskin`
+
+```js
+onSeeking={$END$}
+```
+
+### `onstd`
+
+```js
+onStalled={$END$}
+```
+
+### `onsupd`
+
+```js
+onSuspend={$END$}
+```
+
+### `ontu`
+
+```js
+onTimeUpdate={$END$}
+```
+
+### `onvc`
+
+```js
+onVolumeChange={$END$}
+```
+
+### `onwt`
+
+```js
+onWaiting={$END$}
+```
+
+### `onld`
+
+```js
+onLoad={$END$}
+```
+
+### `onerr`
+
+```js
+onError={$END$}
+```
+
+### `onas`
+
+```js
+onAnimationStart={$END$}
+```
+
+### `onae`
+
+```js
+onAnimationEnd={$END$}
+```
+
+### `onai`
+
+```js
+onAnimationIteration={$END$}
+```
+
+### `ontse`
+
+```js
+onTransitionEnd={$END$}
 ```
 
 

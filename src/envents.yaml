@@ -1,0 +1,95 @@
+# Clipboard Events
+onCopy: oncp
+onCut: onct
+onPaste: onpt
+
+# Composition Events
+onCompositionEnd: oncpse
+onCompositionStart: oncpss
+onCompositionUpdate: oncpsu
+
+# Keyboard Events
+onKeyDown: onkd
+onKeyPress: onps
+onKeyUp: onku
+
+# Focus Events
+onFocus: onfs
+onBlur: onbl
+
+# Form Events
+onChange: oncg
+onInput: onip
+onSubmit: onsb
+
+# Mouse Events
+onClick: onc
+onContextMenu: oncm
+onDoubleClick: ondc
+onDrag: ondg
+onDragEnd: ondge
+onDragEnter: ondgetr
+onDragExit: ondget
+onDragLeave: ondgl
+onDragOver: ondgo
+onDragStart: ondgst
+onDrop: ondp
+onMouseDown: onmd
+onMouseEnter: onme
+onMouseLeave: onml
+onMouseMove: onmm
+onMouseOut: onmot
+onMouseOver: onmov
+onMouseUp: onmu
+
+# Selection Events
+onSelect: onsl
+
+# Touch Events
+onTouchCancel: ontc
+onTouchEnd: onte
+onTouchMove: ontm
+onTouchStart: onts
+
+# UI Events
+onScroll: onsl
+
+# Wheel Events
+onWheel: onwl
+
+# Media Events
+onAbort: onabt
+onCanPlay: oncpl
+onCanPlayThrough: oncpt
+onDurationChange: ondc
+onEmptied: onempt
+onEncrypted: onekpt
+onEnded: onend
+# onError: onerr
+onLoadedData: onldd
+onLoadedMetadata: onldmd
+onLoadStart: onls
+onPause: onpaus
+onPlay: opl
+onPlaying: onplg
+onProgress: onpgs
+onRateChange: onrc
+onSeeked: onsked
+onSeeking: onskin
+onStalled: onstd
+onSuspend: onsupd
+onTimeUpdate: ontu
+onVolumeChange: onvc
+onWaiting: onwt
+
+# Image Events
+onLoad: onld
+onError: onerr
+
+# Animation Events
+onAnimationStart: onas
+onAnimationEnd: onae
+onAnimationIteration: onai
+
+# Transition Events
+onTransitionEnd: ontse

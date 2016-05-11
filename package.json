@@ -1,6 +1,6 @@
 {
   "name": "jetbrains-react",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "React snippets(live templates) for JetBrains series editors.",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,6 @@
     "gulp": "^3.9.1",
     "gulp-zip": "^3.2.0",
     "handlebars": "^4.0.5",
-    "js-yaml": "^3.5.3"
+    "js-yaml": "^3.6.0"
   }
 }

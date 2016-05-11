@@ -3,12 +3,15 @@ rcc:
   description: Create a React.js component
   tpl:
     next: |
-      import React from 'react';
+      import React, {
+        Component,
+        PropTypes,
+      } from 'react';
 
       const $class$ = React.createClass({
         render() {
           return (
-            <div />
+            <div>$END$</div>
           );
         }
       });
@@ -19,11 +22,12 @@ rcc:
       'use strict';
 
       var React = require('react');
+      var PropTypes = PropTypes;
 
       var $class$ = React.createClass({
        render: function() {
          return (
-           <div />
+           <div>$END$</div>
          );
        }
       });
@@ -37,12 +41,15 @@ rcc:
 rcls:
   description: Create a ES2015 class
   tpl: |
-    import React from 'react';
+    import React, {
+      Component,
+      PropTypes,
+    } from 'react';
 
-    class $class$ extends React.Component {
+    class $class$ extends Component {
       render() {
         return (
-          <div />
+          <div>$END$</div>
         );
       }
     }
@@ -82,7 +89,7 @@ cdm:
 cdu:
   description: componentDidUpdate
   tpl: |
-    componentDidUpdate: function(prevProps, prevState) {
+    componentDidUpdate: function(prevProps, prevState, prevContext) {
       $END$
     },
 
@@ -98,7 +105,7 @@ cwm:
 cwr:
   description: componentWillReceiveProps
   tpl: |
-    componentWillReceiveProps: function(nextProps) {
+    componentWillReceiveProps: function(nextProps, nextContext) {
       $END$
     },
 
@@ -106,7 +113,7 @@ cwr:
 cwu:
   description: componentWillUpdate
   tpl: |
-    componentWillUpdate: function(nextProps, nextState) {
+    componentWillUpdate: function(nextProps, nextState, nextContext) {
       $END$
     },
 
@@ -120,6 +127,10 @@ cwum:
 
 # ReactDOM.findDOMNode
 fdn:
+  description: findDOMNode
+  tpl: findDOMNode($END$);
+
+rfdn:
   description: ReactDOM.findDOMNode
   tpl: ReactDOM.findDOMNode($END$);
 
@@ -158,21 +169,26 @@ ism:
 props:
   tpl: this.props
 
+# set inner HTML
+dsih:
+  description: dangerouslySetInnerHTML
+  tpl: "dangerouslySetInnerHTML={__html: '$END$'}"
+
 # propTypes
-pt:
+pts:
   description: propTypes
   tpl: |
     propTypes: {
-      $START$: React.PropTypes.$END$
+      $START$: PropTypes.$END$
     },
 
   variables:
     - {name: 'START'}
 
 # PropType
-rp:
-  description: React.PropTypes.
-  tpl: "$START$: React.PropTypes.$END$"
+pt:
+  description: PropTypes.
+  tpl: "$START$: PropTypes.$END$"
   variables:
     - {name: 'START'}
 
@@ -185,7 +201,7 @@ ren:
   tpl: |
     render: function() {
       return (
-        <div />$END$
+        <div>$END$</div>
       );
     }
 
@@ -193,7 +209,7 @@ ren:
 scu:
   description: shouldComponentUpdate
   tpl: |
-    shouldComponentUpdate: function(nextProps, nextState) {
+    shouldComponentUpdate: function(nextProps, nextState, nextContext) {
       $END$
     },
 
@@ -216,7 +232,7 @@ ct:
   description: contextTypes
   tpl: |
     contextTypes: {
-      $START$: React.PropTypes.$END$
+      $START$: PropTypes.$END$
     },
 
   variables:
@@ -227,7 +243,7 @@ cct:
   description: childContextTypes
   tpl: |
     childContextTypes: {
-      $START$: React.PropTypes.$END$
+      $START$: PropTypes.$END$
     },
 
   variables:
@@ -247,6 +263,64 @@ gcc:
         $START$: $END$
       };
     },
+
+  variables:
+    - {name: 'START'}
+
+
+# static
+
+# static propTypes
+spt:
+  description: static propTypes
+  tpl: |
+    static propTypes = {
+      $START$: PropTypes.$END$
+    };
+
+  variables:
+    - {name: 'START'}
+
+# static defaultProps
+sdp:
+  description: static defaultProps
+  tpl: |
+    static defaultProps = {
+      $START$: PropTypes.$END$
+    };
+
+  variables:
+    - {name: 'START'}
+
+# static context
+sct:
+  description: static contextTypes
+  tpl: |
+    static contextTypes = {
+      $START$: PropTypes.$END$
+    };
+
+  variables:
+    - {name: 'START'}
+
+# static childContextTypes
+scct:
+  description: static childContextTypes
+  tpl: |
+    static childContextTypes = {
+      $START$: PropTypes.$END$
+    };
+
+  variables:
+    - {name: 'START'}
+
+# constructor
+csttr:
+  description: constructor(props, context)
+  tpl: |
+    constructor(props, context$START$) {
+      super(props, context$END$);
+    }
 
   variables:
     - {name: 'START'}

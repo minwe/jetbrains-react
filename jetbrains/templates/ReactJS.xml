@@ -1,7 +1,7 @@
 <templateSet group="ReactJS">
   <template
       name="rcc"
-      value="import React from 'react';&#10;&#10;const $class$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div /&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $class$;&#10;"
+      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from 'react';&#10;&#10;const $class$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $class$;&#10;"
       description="Create a React.js component"
       toReformat="false"
       toShortenFQNames="true">
@@ -15,7 +15,7 @@
   </template>
   <template
       name="rcc5"
-      value="'use strict';&#10;&#10;var React = require('react');&#10;&#10;var $class$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     &lt;div /&gt;&#10;   );&#10; }&#10;});&#10;&#10;module.exports = $class$;&#10;"
+      value="'use strict';&#10;&#10;var React = require('react');&#10;var PropTypes = PropTypes;&#10;&#10;var $class$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     &lt;div&gt;$END$&lt;/div&gt;&#10;   );&#10; }&#10;});&#10;&#10;module.exports = $class$;&#10;"
       description="Create a React.js component"
       toReformat="false"
       toShortenFQNames="true">
@@ -29,7 +29,7 @@
   </template>
   <template
       name="rcls"
-      value="import React from 'react';&#10;&#10;class $class$ extends React.Component {&#10;  render() {&#10;    return (&#10;      &lt;div /&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$class$.propTypes = {};&#10;$class$.defaultProps = {};&#10;&#10;export default $class$;&#10;"
+      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from 'react';&#10;&#10;class $class$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$class$.propTypes = {};&#10;$class$.defaultProps = {};&#10;&#10;export default $class$;&#10;"
       description="Create a ES2015 class"
       toReformat="false"
       toShortenFQNames="true">
@@ -71,7 +71,7 @@
   </template>
   <template
       name="cdm"
-      value="componentDidMount() {&#10;  $END$&#10;},&#10;"
+      value="componentDidMount() {&#10;  $END$&#10;}&#10;"
       description="componentDidMount"
       toReformat="false"
       toShortenFQNames="true">
@@ -97,7 +97,7 @@
   </template>
   <template
       name="cdu"
-      value="componentDidUpdate(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
+      value="componentDidUpdate(prevProps, prevState, prevContext) {&#10;  $END$&#10;}&#10;"
       description="componentDidUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -110,7 +110,7 @@
   </template>
   <template
       name="cdu5"
-      value="componentDidUpdate: function(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
+      value="componentDidUpdate: function(prevProps, prevState, prevContext) {&#10;  $END$&#10;},&#10;"
       description="componentDidUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -123,7 +123,7 @@
   </template>
   <template
       name="cwm"
-      value="componentWillMount() {&#10;  $END$&#10;},&#10;"
+      value="componentWillMount() {&#10;  $END$&#10;}&#10;"
       description="componentWillMount"
       toReformat="false"
       toShortenFQNames="true">
@@ -149,7 +149,7 @@
   </template>
   <template
       name="cwr"
-      value="componentWillReceiveProps(nextProps) {&#10;  $END$&#10;},&#10;"
+      value="componentWillReceiveProps(nextProps, nextContext) {&#10;  $END$&#10;}&#10;"
       description="componentWillReceiveProps"
       toReformat="false"
       toShortenFQNames="true">
@@ -162,7 +162,7 @@
   </template>
   <template
       name="cwr5"
-      value="componentWillReceiveProps: function(nextProps) {&#10;  $END$&#10;},&#10;"
+      value="componentWillReceiveProps: function(nextProps, nextContext) {&#10;  $END$&#10;},&#10;"
       description="componentWillReceiveProps"
       toReformat="false"
       toShortenFQNames="true">
@@ -175,7 +175,7 @@
   </template>
   <template
       name="cwu"
-      value="componentWillUpdate(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      value="componentWillUpdate(nextProps, nextState, nextContext) {&#10;  $END$&#10;}&#10;"
       description="componentWillUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -188,7 +188,7 @@
   </template>
   <template
       name="cwu5"
-      value="componentWillUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      value="componentWillUpdate: function(nextProps, nextState, nextContext) {&#10;  $END$&#10;},&#10;"
       description="componentWillUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -201,7 +201,7 @@
   </template>
   <template
       name="cwum"
-      value="componentWillUnmount() {&#10;  $END$&#10;},&#10;"
+      value="componentWillUnmount() {&#10;  $END$&#10;}&#10;"
       description="componentWillUnmount"
       toReformat="false"
       toShortenFQNames="true">
@@ -227,6 +227,19 @@
   </template>
   <template
       name="fdn"
+      value="findDOMNode($END$);"
+      description="findDOMNode"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rfdn"
       value="ReactDOM.findDOMNode($END$);"
       description="ReactDOM.findDOMNode"
       toReformat="false"
@@ -253,7 +266,7 @@
   </template>
   <template
       name="gdp"
-      value="getDefaultProps() {&#10;  return {&#10;    $END$&#10;  };&#10;},&#10;"
+      value="getDefaultProps() {&#10;  return {&#10;    $END$&#10;  };&#10;}&#10;"
       description="getDefaultProps"
       toReformat="false"
       toShortenFQNames="true">
@@ -279,7 +292,7 @@
   </template>
   <template
       name="gis"
-      value="getInitialState() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      value="getInitialState() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;}&#10;"
       description="getInitialState"
       toReformat="false"
       toShortenFQNames="true">
@@ -332,8 +345,21 @@
     </context>
   </template>
   <template
-      name="pt"
-      value="propTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      name="dsih"
+      value="dangerouslySetInnerHTML={__html: '$END$'}"
+      description="dangerouslySetInnerHTML"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="pts"
+      value="propTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
       description="propTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -346,9 +372,9 @@
     </context>
   </template>
   <template
-      name="rp"
-      value="$START$: React.PropTypes.$END$"
-      description="React.PropTypes."
+      name="pt"
+      value="$START$: PropTypes.$END$"
+      description="PropTypes."
       toReformat="false"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
@@ -374,7 +400,7 @@
   </template>
   <template
       name="ren"
-      value="render() {&#10;  return (&#10;    &lt;div /&gt;$END$&#10;  );&#10;}&#10;"
+      value="render() {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;"
       description="render()"
       toReformat="false"
       toShortenFQNames="true">
@@ -387,7 +413,7 @@
   </template>
   <template
       name="ren5"
-      value="render: function() {&#10;  return (&#10;    &lt;div /&gt;$END$&#10;  );&#10;}&#10;"
+      value="render: function() {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;"
       description="render()"
       toReformat="false"
       toShortenFQNames="true">
@@ -400,7 +426,7 @@
   </template>
   <template
       name="scu"
-      value="shouldComponentUpdate(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      value="shouldComponentUpdate(nextProps, nextState, nextContext) {&#10;  $END$&#10;}&#10;"
       description="shouldComponentUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -413,7 +439,7 @@
   </template>
   <template
       name="scu5"
-      value="shouldComponentUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      value="shouldComponentUpdate: function(nextProps, nextState, nextContext) {&#10;  $END$&#10;},&#10;"
       description="shouldComponentUpdate"
       toReformat="false"
       toShortenFQNames="true">
@@ -453,7 +479,7 @@
   </template>
   <template
       name="ct"
-      value="contextTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      value="contextTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
       description="contextTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -467,7 +493,7 @@
   </template>
   <template
       name="cct"
-      value="childContextTypes: {&#10;  $START$: React.PropTypes.$END$&#10;},&#10;"
+      value="childContextTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
       description="childContextTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -494,7 +520,7 @@
   </template>
   <template
       name="gcc"
-      value="getChildContext() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;},&#10;"
+      value="getChildContext() {&#10;  return {&#10;    $START$: $END$&#10;  };&#10;}&#10;"
       description="getChildContext"
       toReformat="false"
       toShortenFQNames="true">
@@ -513,6 +539,947 @@
       toReformat="false"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="spt"
+      value="static propTypes = {&#10;  $START$: PropTypes.$END$&#10;};&#10;"
+      description="static propTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="sdp"
+      value="static defaultProps = {&#10;  $START$: PropTypes.$END$&#10;};&#10;"
+      description="static defaultProps"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="sct"
+      value="static contextTypes = {&#10;  $START$: PropTypes.$END$&#10;};&#10;"
+      description="static contextTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="scct"
+      value="static childContextTypes = {&#10;  $START$: PropTypes.$END$&#10;};&#10;"
+      description="static childContextTypes"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="csttr"
+      value="constructor(props, context$START$) {&#10;  super(props, context$END$);&#10;}&#10;"
+      description="constructor(props, context)"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncp"
+      value="onCopy={$END$}"
+      description="onCopy"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onct"
+      value="onCut={$END$}"
+      description="onCut"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onpt"
+      value="onPaste={$END$}"
+      description="onPaste"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncpse"
+      value="onCompositionEnd={$END$}"
+      description="onCompositionEnd"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncpss"
+      value="onCompositionStart={$END$}"
+      description="onCompositionStart"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncpsu"
+      value="onCompositionUpdate={$END$}"
+      description="onCompositionUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onkd"
+      value="onKeyDown={$END$}"
+      description="onKeyDown"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onps"
+      value="onKeyPress={$END$}"
+      description="onKeyPress"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onku"
+      value="onKeyUp={$END$}"
+      description="onKeyUp"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onfs"
+      value="onFocus={$END$}"
+      description="onFocus"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onbl"
+      value="onBlur={$END$}"
+      description="onBlur"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncg"
+      value="onChange={$END$}"
+      description="onChange"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onip"
+      value="onInput={$END$}"
+      description="onInput"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onsb"
+      value="onSubmit={$END$}"
+      description="onSubmit"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onc"
+      value="onClick={$END$}"
+      description="onClick"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncm"
+      value="onContextMenu={$END$}"
+      description="onContextMenu"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondc"
+      value="onDoubleClick={$END$}"
+      description="onDoubleClick"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondg"
+      value="onDrag={$END$}"
+      description="onDrag"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondge"
+      value="onDragEnd={$END$}"
+      description="onDragEnd"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondgetr"
+      value="onDragEnter={$END$}"
+      description="onDragEnter"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondget"
+      value="onDragExit={$END$}"
+      description="onDragExit"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondgl"
+      value="onDragLeave={$END$}"
+      description="onDragLeave"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondgo"
+      value="onDragOver={$END$}"
+      description="onDragOver"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondgst"
+      value="onDragStart={$END$}"
+      description="onDragStart"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondp"
+      value="onDrop={$END$}"
+      description="onDrop"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onmd"
+      value="onMouseDown={$END$}"
+      description="onMouseDown"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onme"
+      value="onMouseEnter={$END$}"
+      description="onMouseEnter"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onml"
+      value="onMouseLeave={$END$}"
+      description="onMouseLeave"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onmm"
+      value="onMouseMove={$END$}"
+      description="onMouseMove"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onmot"
+      value="onMouseOut={$END$}"
+      description="onMouseOut"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onmov"
+      value="onMouseOver={$END$}"
+      description="onMouseOver"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onmu"
+      value="onMouseUp={$END$}"
+      description="onMouseUp"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onsl"
+      value="onSelect={$END$}"
+      description="onSelect"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ontc"
+      value="onTouchCancel={$END$}"
+      description="onTouchCancel"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onte"
+      value="onTouchEnd={$END$}"
+      description="onTouchEnd"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ontm"
+      value="onTouchMove={$END$}"
+      description="onTouchMove"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onts"
+      value="onTouchStart={$END$}"
+      description="onTouchStart"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onsl"
+      value="onScroll={$END$}"
+      description="onScroll"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onwl"
+      value="onWheel={$END$}"
+      description="onWheel"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onabt"
+      value="onAbort={$END$}"
+      description="onAbort"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncpl"
+      value="onCanPlay={$END$}"
+      description="onCanPlay"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="oncpt"
+      value="onCanPlayThrough={$END$}"
+      description="onCanPlayThrough"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ondc"
+      value="onDurationChange={$END$}"
+      description="onDurationChange"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onempt"
+      value="onEmptied={$END$}"
+      description="onEmptied"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onekpt"
+      value="onEncrypted={$END$}"
+      description="onEncrypted"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onend"
+      value="onEnded={$END$}"
+      description="onEnded"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onldd"
+      value="onLoadedData={$END$}"
+      description="onLoadedData"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onldmd"
+      value="onLoadedMetadata={$END$}"
+      description="onLoadedMetadata"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onls"
+      value="onLoadStart={$END$}"
+      description="onLoadStart"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onpaus"
+      value="onPause={$END$}"
+      description="onPause"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="opl"
+      value="onPlay={$END$}"
+      description="onPlay"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onplg"
+      value="onPlaying={$END$}"
+      description="onPlaying"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onpgs"
+      value="onProgress={$END$}"
+      description="onProgress"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onrc"
+      value="onRateChange={$END$}"
+      description="onRateChange"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onsked"
+      value="onSeeked={$END$}"
+      description="onSeeked"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onskin"
+      value="onSeeking={$END$}"
+      description="onSeeking"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onstd"
+      value="onStalled={$END$}"
+      description="onStalled"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onsupd"
+      value="onSuspend={$END$}"
+      description="onSuspend"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ontu"
+      value="onTimeUpdate={$END$}"
+      description="onTimeUpdate"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onvc"
+      value="onVolumeChange={$END$}"
+      description="onVolumeChange"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onwt"
+      value="onWaiting={$END$}"
+      description="onWaiting"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onld"
+      value="onLoad={$END$}"
+      description="onLoad"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onerr"
+      value="onError={$END$}"
+      description="onError"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onas"
+      value="onAnimationStart={$END$}"
+      description="onAnimationStart"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onae"
+      value="onAnimationEnd={$END$}"
+      description="onAnimationEnd"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="onai"
+      value="onAnimationIteration={$END$}"
+      description="onAnimationIteration"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ontse"
+      value="onTransitionEnd={$END$}"
+      description="onTransitionEnd"
+      toReformat="false"
+      toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
