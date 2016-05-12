@@ -1,7 +1,7 @@
 <templateSet group="ReactJS">
   <template
       name="rcc"
-      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from 'react';&#10;&#10;const $class$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $class$;&#10;"
+      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;const $class$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $class$;&#10;"
       description="Create a React.js component"
       toReformat="false"
       toShortenFQNames="true">
@@ -15,7 +15,7 @@
   </template>
   <template
       name="rcc5"
-      value="'use strict';&#10;&#10;var React = require('react');&#10;var PropTypes = PropTypes;&#10;&#10;var $class$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     &lt;div&gt;$END$&lt;/div&gt;&#10;   );&#10; }&#10;});&#10;&#10;module.exports = $class$;&#10;"
+      value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var PropTypes = React.PropTypes;&#10;&#10;var $class$ = React.createClass({&#10; render: function() {&#10;   return (&#10;     &lt;div&gt;$END$&lt;/div&gt;&#10;   );&#10; }&#10;});&#10;&#10;module.exports = $class$;&#10;"
       description="Create a React.js component"
       toReformat="false"
       toShortenFQNames="true">
@@ -29,7 +29,7 @@
   </template>
   <template
       name="rcls"
-      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from 'react';&#10;&#10;class $class$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$class$.propTypes = {};&#10;$class$.defaultProps = {};&#10;&#10;export default $class$;&#10;"
+      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;class $class$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$class$.propTypes = {};&#10;$class$.defaultProps = {};&#10;&#10;export default $class$;&#10;"
       description="Create a ES2015 class"
       toReformat="false"
       toShortenFQNames="true">
@@ -226,6 +226,33 @@
     </context>
   </template>
   <template
+      name="dn"
+      value="displayName: &apos;$END$&apos;,"
+      description="displayName"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="dnp"
+      value="$START$.displayName = &apos;$END$&apos;;"
+      description="displayName as a property"
+      toReformat="false"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="fdn"
       value="findDOMNode($END$);"
       description="findDOMNode"
@@ -346,7 +373,7 @@
   </template>
   <template
       name="dsih"
-      value="dangerouslySetInnerHTML={__html: '$END$'}"
+      value="dangerouslySetInnerHTML={__html: &apos;$END$&apos;}"
       description="dangerouslySetInnerHTML"
       toReformat="false"
       toShortenFQNames="true">
@@ -359,7 +386,7 @@
   </template>
   <template
       name="pts"
-      value="propTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
+      value="propTypes: {&#10;  $START$: PropTypes.$END$&#10;},&#10;"
       description="propTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -479,7 +506,7 @@
   </template>
   <template
       name="ct"
-      value="contextTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
+      value="contextTypes: {&#10;  $START$: PropTypes.$END$&#10;},&#10;"
       description="contextTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -493,7 +520,7 @@
   </template>
   <template
       name="cct"
-      value="childContextTypes: {&#10;  $START$: PropTypes.$END$&#10;}&#10;"
+      value="childContextTypes: {&#10;  $START$: PropTypes.$END$&#10;},&#10;"
       description="childContextTypes"
       toReformat="false"
       toShortenFQNames="true">
@@ -539,6 +566,19 @@
       toReformat="false"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="sdn"
+      value="static displayName = &apos;$END$&apos;;"
+      description="static displayName"
+      toReformat="false"
+      toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -603,12 +643,103 @@
     </context>
   </template>
   <template
-      name="csttr"
+      name="cstt"
       value="constructor(props, context$START$) {&#10;  super(props, context$END$);&#10;}&#10;"
       description="constructor(props, context)"
       toReformat="false"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tsn"
+      value="transitionName=&quot;$END$&quot;"
+      description="transitionName"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tsa"
+      value="transitionAppear={$END$}"
+      description="transitionAppear"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tse"
+      value="transitionEnter={$END$}"
+      description="transitionEnter"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tsl"
+      value="transitionLeave={$END$}"
+      description="transitionLeave"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tset"
+      value="transitionEnterTimeout={$END$}"
+      description="transitionEnterTimeout"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tslt"
+      value="transitionLeaveTimeout={$END$}"
+      description="transitionLeaveTimeout"
+      toReformat="false"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="tsat"
+      value="transitionAppearTimeout={$END$}"
+      description="transitionAppearTimeout"
+      toReformat="false"
+      toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />

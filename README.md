@@ -37,7 +37,6 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 
 ```js
 import React, {
-  Component,
   PropTypes,
 } from 'react';
 
@@ -59,7 +58,7 @@ export default $class$;
 'use strict';
 
 var React = require('react');
-var PropTypes = PropTypes;
+var PropTypes = React.PropTypes;
 
 var $class$ = React.createClass({
  render: function() {
@@ -230,6 +229,18 @@ componentWillUnmount: function() {
 
 ```
 
+### `dn`
+
+```js
+displayName: '$END$',
+```
+
+### `dnp`
+
+```js
+$START$.displayName = '$END$';
+```
+
 ### `fdn`
 
 ```js
@@ -315,7 +326,7 @@ dangerouslySetInnerHTML={__html: '$END$'}
 ```js
 propTypes: {
   $START$: PropTypes.$END$
-}
+},
 
 ```
 
@@ -391,7 +402,7 @@ this.state.$END$
 ```js
 contextTypes: {
   $START$: PropTypes.$END$
-}
+},
 
 ```
 
@@ -400,7 +411,7 @@ contextTypes: {
 ```js
 childContextTypes: {
   $START$: PropTypes.$END$
-}
+},
 
 ```
 
@@ -430,6 +441,12 @@ getChildContext: function() {
   };
 },
 
+```
+
+### `sdn`
+
+```js
+static displayName = '$END$';
 ```
 
 ### `spt`
@@ -468,13 +485,55 @@ static childContextTypes = {
 
 ```
 
-### `csttr`
+### `cstt`
 
 ```js
 constructor(props, context$START$) {
   super(props, context$END$);
 }
 
+```
+
+### `tsn`
+
+```js
+transitionName="$END$"
+```
+
+### `tsa`
+
+```js
+transitionAppear={$END$}
+```
+
+### `tse`
+
+```js
+transitionEnter={$END$}
+```
+
+### `tsl`
+
+```js
+transitionLeave={$END$}
+```
+
+### `tset`
+
+```js
+transitionEnterTimeout={$END$}
+```
+
+### `tslt`
+
+```js
+transitionLeaveTimeout={$END$}
+```
+
+### `tsat`
+
+```js
+transitionAppearTimeout={$END$}
 ```
 
 ### `oncp`

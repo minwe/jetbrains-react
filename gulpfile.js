@@ -9,30 +9,36 @@ var Handlebars = require('handlebars');
 var template = Handlebars.compile(fs.readFileSync('src/ReactJS.hbs', 'utf8'));
 var docTpl = Handlebars.compile(fs.readFileSync('src/doc.hbs', 'utf8'));
 var readme = fs.readFileSync('README.md', 'utf8');
-
 var templates = yaml.safeLoad(fs.readFileSync('src/template.yaml', 'utf8'));
 var eventsTpl = yaml.safeLoad(fs.readFileSync('src/envents.yaml', 'utf8'));
 
-var processTpl = function(tpl) {
-  tpl = JSON.stringify(tpl);
-  return tpl.replace(/\\n/g, '&#10;')
+var escapeTpl = function(tpl) {
+  tpl = tpl.replace(/\n/g, '&#10;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+    // .replace(/&/g, '&amp;')
+  
+  return JSON.stringify(tpl);
 };
 
 var data = [];
-var docData = [];
 
 for (var k in templates) {
   if (templates.hasOwnProperty(k)) {
     var t = templates[k];
+    console.log(typeof t.tpl);
+    var isMethod = (typeof t.tpl === 'string' && t.tpl.indexOf(': function') > -1);
     var tpl = t.tpl.next || t.tpl;
-    tpl = tpl.replace(/: function/g, '').replace(/},/g, '}');
-
+    tpl = tpl.replace(/: function/g, '');
+    
+    isMethod && (tpl = tpl.replace(/},/g, '}'));
+    
     var snippet = {
       name: k,
       description: t.description || t.tpl,
-      tpl: processTpl(tpl),
+      tpl: escapeTpl(tpl),
       variables: t.variables || [],
       tplRaw: tpl
     };
@@ -40,13 +46,13 @@ for (var k in templates) {
     data.push(snippet);
 
     if (t.tpl.next ||
-      (typeof t.tpl === 'string' && t.tpl.indexOf(': function') > -1)) {
+      (typeof t.tpl === 'string' && isMethod)) {
 
       var tpl5 = t.tpl.es5 || t.tpl;
       var snippet5 = {
         name: k + '5',
         description: t.description || t.tpl,
-        tpl: processTpl(tpl5),
+        tpl: escapeTpl(tpl5),
         variables: t.variables || [],
         tplRaw: tpl5
       };
@@ -56,7 +62,7 @@ for (var k in templates) {
   }
 }
 
-function processEnventsTpl(eventsMap) {
+function processEventsTpl(eventsMap) {
   for (var key in eventsMap) {
     if (eventsMap.hasOwnProperty(key)) {
       var tplName = eventsMap[key];
@@ -64,7 +70,7 @@ function processEnventsTpl(eventsMap) {
       data.push({
         name: tplName,
         description: key,
-        tpl: JSON.stringify(tpl),
+        tpl: escapeTpl(tpl),
         tplRaw: tpl
       });
       
@@ -72,7 +78,7 @@ function processEnventsTpl(eventsMap) {
   }
 }
 
-processEnventsTpl(eventsTpl);
+processEventsTpl(eventsTpl);
 
 fs.writeFileSync('jetbrains/templates/ReactJS.xml', template(data));
 fs.writeFileSync('README.md', readme.replace(

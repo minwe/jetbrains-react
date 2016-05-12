@@ -4,7 +4,6 @@ rcc:
   tpl:
     next: |
       import React, {
-        Component,
         PropTypes,
       } from 'react';
 
@@ -22,7 +21,7 @@ rcc:
       'use strict';
 
       var React = require('react');
-      var PropTypes = PropTypes;
+      var PropTypes = React.PropTypes;
 
       var $class$ = React.createClass({
        render: function() {
@@ -124,6 +123,17 @@ cwum:
     componentWillUnmount: function() {
       $END$
     },
+
+# displayName
+dn:
+  description: displayName
+  tpl: "displayName: '$END$',"
+
+dnp:
+  description: displayName as a property
+  tpl: "$START$.displayName = '$END$';"
+  variables:
+    - {name: 'START'}
 
 # ReactDOM.findDOMNode
 fdn:
@@ -271,6 +281,10 @@ gcc:
 # static
 
 # static propTypes
+sdn:
+  description: static displayName
+  tpl: static displayName = '$END$';
+
 spt:
   description: static propTypes
   tpl: |
@@ -315,7 +329,7 @@ scct:
     - {name: 'START'}
 
 # constructor
-csttr:
+cstt:
   description: constructor(props, context)
   tpl: |
     constructor(props, context$START$) {
@@ -324,3 +338,32 @@ csttr:
 
   variables:
     - {name: 'START'}
+
+# transition add-on
+tsn:
+  description: transitionName
+  tpl: transitionName="$END$"
+
+tsa:
+  description: transitionAppear
+  tpl: transitionAppear={$END$}
+
+tse:
+  description: transitionEnter
+  tpl: transitionEnter={$END$}
+
+tsl:
+  description: transitionLeave
+  tpl: transitionLeave={$END$}
+
+tset:
+  description: transitionEnterTimeout
+  tpl: transitionEnterTimeout={$END$}
+
+tslt:
+  description: transitionLeaveTimeout
+  tpl: transitionLeaveTimeout={$END$}
+
+tsat:
+  description: transitionAppearTimeout
+  tpl: transitionAppearTimeout={$END$}
