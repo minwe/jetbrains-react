@@ -373,7 +373,7 @@
   </template>
   <template
       name="dsih"
-      value="dangerouslySetInnerHTML={__html: &apos;$END$&apos;}"
+      value="dangerouslySetInnerHTML={{__html: &apos;$END$&apos;}}"
       description="dangerouslySetInnerHTML"
       toReformat="false"
       toShortenFQNames="true">

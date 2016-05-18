@@ -2,6 +2,8 @@
 
 React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/Minwe/phpstorm-reactjs).
 
+- [Working with ReactJS in WebStorm: Coding Assistance](http://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
+
 ## Installation
 
 ### Importing
@@ -318,7 +320,7 @@ this.props
 ### `dsih`
 
 ```js
-dangerouslySetInnerHTML={__html: '$END$'}
+dangerouslySetInnerHTML={{__html: '$END$'}}
 ```
 
 ### `pts`

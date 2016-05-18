@@ -182,7 +182,7 @@ props:
 # set inner HTML
 dsih:
   description: dangerouslySetInnerHTML
-  tpl: "dangerouslySetInnerHTML={__html: '$END$'}"
+  tpl: "dangerouslySetInnerHTML={{__html: '$END$'}}"
 
 # propTypes
 pts:
