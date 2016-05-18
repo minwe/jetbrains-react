@@ -24,11 +24,11 @@ rcc:
       var PropTypes = React.PropTypes;
 
       var $class$ = React.createClass({
-       render: function() {
-         return (
-           <div>$END$</div>
-         );
-       }
+        render: function() {
+          return (
+            <div>$END$</div>
+          );
+        }
       });
 
       module.exports = $class$;

@@ -1,6 +1,6 @@
 # jetbrains-react
 
-React snippets(live templates) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/Minwe/phpstorm-reactjs).
+React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/Minwe/phpstorm-reactjs).
 
 - [Working with ReactJS in WebStorm: Coding Assistance](http://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
 
@@ -63,11 +63,11 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 
 var $class$ = React.createClass({
- render: function() {
-   return (
-     <div>$END$</div>
-   );
- }
+  render: function() {
+    return (
+      <div>$END$</div>
+    );
+  }
 });
 
 module.exports = $class$;
