@@ -6,12 +6,12 @@ React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-
 
 ### Import Automatically
 
-1. Download [`settings.jar`](https://github.com/minwe/jetbrains-react/raw/master/settings.jar);
+1. Download [**`settings.jar`**](https://github.com/minwe/jetbrains-react/raw/master/settings.jar);
 2. Click `File` -> `Importing Settings...` on your IDE menu, select `settings.jar`, then click `OK`.
 
 ### Install Manually
 
-1. Download and copy the `jetbrains/templates/ReactJS.xml` file to your templates folder:
+1. Download([save as...](https://raw.githubusercontent.com/minwe/jetbrains-react/master/jetbrains/templates/ReactJS.xml)) and copy the `jetbrains/templates/ReactJS.xml` file to your templates folder:
 
   - Windows: `<your home directory>\.<product name><version number>\config\templates`
   - Linux: `~\.<product name><version number>\config\templates`
