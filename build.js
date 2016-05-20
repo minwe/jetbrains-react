@@ -1,16 +1,17 @@
 'use strict';
 
 const fs = require('fs');
-const gulp = require('gulp');
-const zip = require('gulp-zip');
 const yaml = require('js-yaml');
 const Handlebars = require('handlebars');
+const read = (file) => {
+  return fs.readFileSync(file, 'utf8');
+};
 
-const template = Handlebars.compile(fs.readFileSync('src/ReactJS.hbs', 'utf8'));
-const docTpl = Handlebars.compile(fs.readFileSync('src/doc.hbs', 'utf8'));
-const readme = fs.readFileSync('README.md', 'utf8');
-const templates = yaml.safeLoad(fs.readFileSync('src/template.yaml', 'utf8'));
-const eventsTpl = yaml.safeLoad(fs.readFileSync('src/events.yaml', 'utf8'));
+const template = Handlebars.compile(read('src/ReactJS.hbs'));
+const docTpl = Handlebars.compile(read('src/doc.hbs'));
+const readme = read('README.md');
+const templates = yaml.safeLoad(read('src/template.yaml'));
+const eventsTpl = yaml.safeLoad(read('src/events.yaml'));
 
 let escapeTpl = (tpl) => {
   tpl = tpl.replace(/\n/g, '&#10;')
@@ -35,7 +36,7 @@ Object.keys(templates).forEach((k) => {
 
   var snippet = {
     name: k,
-    description: t.description || t.tpl,
+    description: `React: ${t.description || t.tpl}`,
     tpl: escapeTpl(tpl),
     variables: t.variables || [],
     tplRaw: tpl
@@ -49,7 +50,7 @@ Object.keys(templates).forEach((k) => {
     var tpl5 = t.tpl.es5 || t.tpl;
     var snippet5 = {
       name: k + '5',
-      description: t.description || t.tpl,
+      description: `React: ${t.description || t.tpl}`,
       tpl: escapeTpl(tpl5),
       variables: t.variables || [],
       tplRaw: tpl5
@@ -66,7 +67,7 @@ function processEventsTpl(eventsMap) {
 
     data.push({
       name: tplName,
-      description: key,
+      description: `React: ${key}`,
       tpl: escapeTpl(tpl),
       tplRaw: tpl
     });
@@ -82,8 +83,5 @@ fs.writeFileSync('README.md', readme.replace(
     return $1 + '\n' + docTpl(data) + '\n' + $2;
   }));
 
-gulp.task('default', () => {
-  return gulp.src('jetbrains/**/*')
-    .pipe(zip('jetbrains-react.jar'))
-    .pipe(gulp.dest('.'));
-});
+// build jar
+// @see http://www.codejava.net/java-core/tools/using-jar-command-examples

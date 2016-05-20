@@ -61,6 +61,18 @@ rcls:
   variables:
     - {name: 'class', expression: 'complete()'}
 
+# Import react-dom
+rdom:
+  description: import ReactDOM
+  tpl:
+    next: |
+      import ReactDOM from 'react-dom';
+      $END$
+
+    es5: |
+      var ReactDOM = require('react-dom');
+      $END$
+
 # Nested component
 rccc:
   description: Create a sub component
@@ -189,7 +201,7 @@ pts:
   description: propTypes
   tpl: |
     propTypes: {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     },
 
   variables:
@@ -198,7 +210,7 @@ pts:
 # PropType
 pt:
   description: PropTypes.
-  tpl: "$START$: PropTypes.$END$"
+  tpl: "$START$: PropTypes.$END$,"
   variables:
     - {name: 'START'}
 
@@ -228,7 +240,7 @@ sst:
   description: this.setState
   tpl: |
     this.setState({
-      $START$: $END$
+      $START$: $END$,
     });
   variables:
     - {name: 'START'}
@@ -242,7 +254,7 @@ ct:
   description: contextTypes
   tpl: |
     contextTypes: {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     },
 
   variables:
@@ -253,7 +265,7 @@ cct:
   description: childContextTypes
   tpl: |
     childContextTypes: {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     },
 
   variables:
@@ -289,7 +301,7 @@ spt:
   description: static propTypes
   tpl: |
     static propTypes = {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     };
 
   variables:
@@ -300,7 +312,7 @@ sdp:
   description: static defaultProps
   tpl: |
     static defaultProps = {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     };
 
   variables:
@@ -311,7 +323,7 @@ sct:
   description: static contextTypes
   tpl: |
     static contextTypes = {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     };
 
   variables:
@@ -322,7 +334,7 @@ scct:
   description: static childContextTypes
   tpl: |
     static childContextTypes = {
-      $START$: PropTypes.$END$
+      $START$: PropTypes.$END$,
     };
 
   variables:

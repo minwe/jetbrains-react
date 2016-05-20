@@ -1,10 +1,12 @@
 {
   "name": "jetbrains-react",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "React snippets(live templates) for JetBrains series editors.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jar": "jar cfvM settings.jar -C jetbrains templates jetbrains/IntelliJ\\ IDEA\\ Global\\ Settings",
+    "build": "node build.js && npm run jar"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,7 @@
   },
   "homepage": "https://github.com/Minwe/jetbrains-react#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-zip": "^3.2.0",
     "handlebars": "^4.0.5",
-    "js-yaml": "^3.6.0"
+    "js-yaml": "^3.6.1"
   }
 }

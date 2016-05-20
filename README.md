@@ -1,15 +1,13 @@
 # jetbrains-react
 
-React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/Minwe/phpstorm-reactjs).
-
-- [Working with ReactJS in WebStorm: Coding Assistance](http://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
+React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/geochatz/phpstorm-reactjs).
 
 ## Installation
 
-### Importing
+### Import Automatically
 
-1. Download `jetbrains-react.jar`;
-2. Click `File` -> `Importing Settings...` on your IDE menubar, select `jetbrains-react.jar`, then click `OK`.
+1. Download [`settings.jar`](https://github.com/minwe/jetbrains-react/raw/master/settings.jar);
+2. Click `File` -> `Importing Settings...` on your IDE menu, select `settings.jar`, then click `OK`.
 
 ### Install Manually
 
@@ -28,11 +26,15 @@ React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-
 
 ## Usage
 
-It's hard to remember shortcuts when there are a large number of options. A more efficient way is to take advantage of editor's Insert Live Template shortcut. Press `Cmd + J` and type as many letters as you want to filter the resulates.
+It's hard to remember shortcuts when there are a large number of options. A more efficient way is to take advantage of editor's Insert Live Template shortcut. Press `Cmd + J` and type as many letters as you want to filter the results.
 
 For example, to create a new React class, type `rcc` and press `Tab` or press `Cmd + J` and write `rcc` or `React`.
 
-**Documentation of available snippets (JSX):**
+**The WebStorm official blog post**:
+
+- [Working with ReactJS in WebStorm: Coding Assistance](http://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
+
+**Documentation of available snippets:**
 
 <!--DOC_START-->
 ### `rcc`
@@ -94,6 +96,22 @@ $class$.propTypes = {};
 $class$.defaultProps = {};
 
 export default $class$;
+
+```
+
+### `rdom`
+
+```js
+import ReactDOM from 'react-dom';
+$END$
+
+```
+
+### `rdom5`
+
+```js
+var ReactDOM = require('react-dom');
+$END$
 
 ```
 
@@ -327,7 +345,7 @@ dangerouslySetInnerHTML={{__html: '$END$'}}
 
 ```js
 propTypes: {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 },
 
 ```
@@ -335,7 +353,7 @@ propTypes: {
 ### `pt`
 
 ```js
-$START$: PropTypes.$END$
+$START$: PropTypes.$END$,
 ```
 
 ### `refs`
@@ -388,7 +406,7 @@ shouldComponentUpdate: function(nextProps, nextState, nextContext) {
 
 ```js
 this.setState({
-  $START$: $END$
+  $START$: $END$,
 });
 
 ```
@@ -403,7 +421,7 @@ this.state.$END$
 
 ```js
 contextTypes: {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 },
 
 ```
@@ -412,7 +430,7 @@ contextTypes: {
 
 ```js
 childContextTypes: {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 },
 
 ```
@@ -455,7 +473,7 @@ static displayName = '$END$';
 
 ```js
 static propTypes = {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 };
 
 ```
@@ -464,7 +482,7 @@ static propTypes = {
 
 ```js
 static defaultProps = {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 };
 
 ```
@@ -473,7 +491,7 @@ static defaultProps = {
 
 ```js
 static contextTypes = {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 };
 
 ```
@@ -482,7 +500,7 @@ static contextTypes = {
 
 ```js
 static childContextTypes = {
-  $START$: PropTypes.$END$
+  $START$: PropTypes.$END$,
 };
 
 ```
