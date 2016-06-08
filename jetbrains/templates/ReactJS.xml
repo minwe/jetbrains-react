@@ -628,7 +628,7 @@
   </template>
   <template
       name="sdp"
-      value="static defaultProps = {&#10;  $START$: PropTypes.$END$,&#10;};&#10;"
+      value="static defaultProps = {&#10;  $START$: $END$,&#10;};&#10;"
       description="React: static defaultProps"
       toReformat="true"
       toShortenFQNames="true">

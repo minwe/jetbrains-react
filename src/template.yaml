@@ -291,7 +291,8 @@ gcc:
 
 
 # static
-
+# https://babeljs.io/blog/2015/06/07/react-on-es6-plus
+# https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#es7-property-initializers
 # static propTypes
 sdn:
   description: static displayName
@@ -312,7 +313,7 @@ sdp:
   description: static defaultProps
   tpl: |
     static defaultProps = {
-      $START$: PropTypes.$END$,
+      $START$: $END$,
     };
 
   variables:

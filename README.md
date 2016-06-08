@@ -482,7 +482,7 @@ static propTypes = {
 
 ```js
 static defaultProps = {
-  $START$: PropTypes.$END$,
+  $START$: $END$,
 };
 
 ```
