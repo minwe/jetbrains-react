@@ -37,6 +37,70 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 **Documentation of available snippets:**
 
 <!--DOC_START-->
+### `rcls`
+
+```js
+import React, {
+  Component,
+  PropTypes,
+} from 'react';
+
+class $COMPONENT$ extends Component {
+  render() {
+    return (
+      <div>$END$</div>
+    );
+  }
+}
+
+$COMPONENT$.propTypes = {};
+$COMPONENT$.defaultProps = {};
+
+export default $COMPONENT$;
+
+```
+
+### `rpfc`
+
+```js
+import React, {
+  PropTypes,
+} from 'react';
+
+const $COMPONENT$ = ($PARAMETER$) => {
+  return (
+    <div>$END$</div>
+  );
+};
+
+$COMPONENT$.propTypes = {};
+$COMPONENT$.defaultProps = {};
+
+export default $COMPONENT$;
+
+```
+
+### `rpfc5`
+
+```js
+'use strict';
+
+var React = require('react');
+var PropTypes = React.PropTypes;
+
+function $COMPONENT$($PARAMETER$) {
+  return (
+    <div>$END$</div>
+  );
+}
+
+$COMPONENT$.propTypes = {};
+$COMPONENT$.defaultProps = {};
+
+module.exports = $COMPONENT$;
+
+```
+
 ### `rcc`
 
 ```js
@@ -44,7 +108,7 @@ import React, {
   PropTypes,
 } from 'react';
 
-const $class$ = React.createClass({
+const $COMPONENT$ = React.createClass({
   render() {
     return (
       <div>$END$</div>
@@ -52,7 +116,7 @@ const $class$ = React.createClass({
   }
 });
 
-export default $class$;
+export default $COMPONENT$;
 
 ```
 
@@ -64,7 +128,7 @@ export default $class$;
 var React = require('react');
 var PropTypes = React.PropTypes;
 
-var $class$ = React.createClass({
+var $COMPONENT$ = React.createClass({
   render: function() {
     return (
       <div>$END$</div>
@@ -72,30 +136,7 @@ var $class$ = React.createClass({
   }
 });
 
-module.exports = $class$;
-
-```
-
-### `rcls`
-
-```js
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
-
-class $class$ extends Component {
-  render() {
-    return (
-      <div>$END$</div>
-    );
-  }
-}
-
-$class$.propTypes = {};
-$class$.defaultProps = {};
-
-export default $class$;
+module.exports = $COMPONENT$;
 
 ```
 

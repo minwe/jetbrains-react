@@ -1,4 +1,74 @@
 # Create component
+
+# https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#plain-javascript-classes
+rcls:
+  description: Create a React ES2015 class
+  tpl: |
+    import React, {
+      Component,
+      PropTypes,
+    } from 'react';
+
+    class $COMPONENT$ extends Component {
+      render() {
+        return (
+          <div>$END$</div>
+        );
+      }
+    }
+
+    $COMPONENT$.propTypes = {};
+    $COMPONENT$.defaultProps = {};
+
+    export default $COMPONENT$;
+
+  variables:
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
+
+# Pure function component
+# @see https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.qxyk0j6nc
+# @see https://facebook.github.io/react/docs/reusable-components.html#stateless-functions
+# @see https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html#stateless-function-components
+rpfc:
+  description: Create a pure function component
+  tpl:
+    next: |
+      import React, {
+        PropTypes,
+      } from 'react';
+
+      const $COMPONENT$ = ($PARAMETER$) => {
+        return (
+          <div>$END$</div>
+        );
+      };
+
+      $COMPONENT$.propTypes = {};
+      $COMPONENT$.defaultProps = {};
+
+      export default $COMPONENT$;
+
+    es5: |
+      'use strict';
+
+      var React = require('react');
+      var PropTypes = React.PropTypes;
+
+      function $COMPONENT$($PARAMETER$) {
+        return (
+          <div>$END$</div>
+        );
+      }
+
+      $COMPONENT$.propTypes = {};
+      $COMPONENT$.defaultProps = {};
+
+      module.exports = $COMPONENT$;
+
+  variables:
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
+    - {name: 'PARAMETER', defaultValue: '&quot;props&quot;'}
+
 rcc:
   description: Create a React.js component
   tpl:
@@ -7,7 +77,7 @@ rcc:
         PropTypes,
       } from 'react';
 
-      const $class$ = React.createClass({
+      const $COMPONENT$ = React.createClass({
         render() {
           return (
             <div>$END$</div>
@@ -15,7 +85,7 @@ rcc:
         }
       });
 
-      export default $class$;
+      export default $COMPONENT$;
 
     es5: |
       'use strict';
@@ -23,7 +93,7 @@ rcc:
       var React = require('react');
       var PropTypes = React.PropTypes;
 
-      var $class$ = React.createClass({
+      var $COMPONENT$ = React.createClass({
         render: function() {
           return (
             <div>$END$</div>
@@ -31,35 +101,10 @@ rcc:
         }
       });
 
-      module.exports = $class$;
+      module.exports = $COMPONENT$;
 
   variables:
-    - {name: 'class', expression: 'complete()'}
-
-# https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#plain-javascript-classes
-rcls:
-  description: Create a ES2015 class
-  tpl: |
-    import React, {
-      Component,
-      PropTypes,
-    } from 'react';
-
-    class $class$ extends Component {
-      render() {
-        return (
-          <div>$END$</div>
-        );
-      }
-    }
-
-    $class$.propTypes = {};
-    $class$.defaultProps = {};
-
-    export default $class$;
-
-  variables:
-    - {name: 'class', expression: 'complete()'}
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
 
 # Import react-dom
 rdom:
