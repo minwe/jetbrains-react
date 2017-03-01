@@ -27,14 +27,14 @@ let escapeTpl = (tpl) => {
 let data = [];
 
 Object.keys(templates).forEach((k) => {
-  var t = templates[k];
-  var isMethod = (typeof t.tpl === 'string' && t.tpl.indexOf(': function') > -1);
-  var tpl = t.tpl.next || t.tpl;
+  const t = templates[k];
+  const isMethod = (typeof t.tpl === 'string' && t.tpl.indexOf(': function') > -1);
+  let tpl = t.tpl.next || t.tpl;
   tpl = tpl.replace(/: function/g, '');
 
   isMethod && (tpl = tpl.replace(/},/g, '}'));
 
-  var snippet = {
+  const snippet = {
     name: k,
     description: `React: ${t.description || t.tpl}`,
     tpl: escapeTpl(tpl),
@@ -47,8 +47,8 @@ Object.keys(templates).forEach((k) => {
   if (t.tpl.next ||
     (typeof t.tpl === 'string' && isMethod)) {
 
-    var tpl5 = t.tpl.es5 || t.tpl;
-    var snippet5 = {
+    const tpl5 = t.tpl.es5 || t.tpl;
+    const snippet5 = {
       name: k + '5',
       description: `React: ${t.description || t.tpl}`,
       tpl: escapeTpl(tpl5),
@@ -62,8 +62,8 @@ Object.keys(templates).forEach((k) => {
 
 function processEventsTpl(eventsMap) {
   Object.keys(eventsMap).forEach((key) => {
-    var tplName = eventsMap[key];
-    var tpl = `${key}={$END$}`;
+    const tplName = eventsMap[key];
+    const tpl = `${key}={$END$}`;
 
     data.push({
       name: tplName,

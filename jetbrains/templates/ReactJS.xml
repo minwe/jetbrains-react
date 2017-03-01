@@ -15,7 +15,7 @@
   </template>
   <template
       name="rpfc"
-      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;const $COMPONENT$ = ($PARAMETER$) =&gt; {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a pure function component"
       toReformat="true"
       toShortenFQNames="true">
@@ -32,6 +32,21 @@
       name="rpfc5"
       value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var PropTypes = React.PropTypes;&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;module.exports = $COMPONENT$;&#10;"
       description="React: Create a pure function component"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="COMPONENT" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETER" expression="" defaultValue="&quot;props&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rpfcaf"
+      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;const $COMPONENT$ = ($PARAMETER$) =&gt; {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      description="React: Create a pure function component using arrow function"
       toReformat="true"
       toShortenFQNames="true">
     <variable name="COMPONENT" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />

@@ -67,11 +67,11 @@ import React, {
   PropTypes,
 } from 'react';
 
-const $COMPONENT$ = ($PARAMETER$) => {
+function $COMPONENT$($PARAMETER$) {
   return (
     <div>$END$</div>
   );
-};
+}
 
 $COMPONENT$.propTypes = {};
 $COMPONENT$.defaultProps = {};
@@ -98,6 +98,26 @@ $COMPONENT$.propTypes = {};
 $COMPONENT$.defaultProps = {};
 
 module.exports = $COMPONENT$;
+
+```
+
+### `rpfcaf`
+
+```js
+import React, {
+  PropTypes,
+} from 'react';
+
+const $COMPONENT$ = ($PARAMETER$) => {
+  return (
+    <div>$END$</div>
+  );
+};
+
+$COMPONENT$.propTypes = {};
+$COMPONENT$.defaultProps = {};
+
+export default $COMPONENT$;
 
 ```
 

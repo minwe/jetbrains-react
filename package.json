@@ -1,6 +1,6 @@
 {
   "name": "jetbrains-react",
-  "version": "2.5.0",
+  "version": "2.6.1",
   "description": "React snippets(live templates) for JetBrains series editors.",
   "main": "index.js",
   "scripts": {

@@ -37,11 +37,11 @@ rpfc:
         PropTypes,
       } from 'react';
 
-      const $COMPONENT$ = ($PARAMETER$) => {
+      function $COMPONENT$($PARAMETER$) {
         return (
           <div>$END$</div>
         );
-      };
+      }
 
       $COMPONENT$.propTypes = {};
       $COMPONENT$.defaultProps = {};
@@ -64,6 +64,28 @@ rpfc:
       $COMPONENT$.defaultProps = {};
 
       module.exports = $COMPONENT$;
+
+  variables:
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
+    - {name: 'PARAMETER', defaultValue: '&quot;props&quot;'}
+
+rpfcaf:
+  description: Create a pure function component using arrow function
+  tpl: |
+    import React, {
+      PropTypes,
+    } from 'react';
+
+    const $COMPONENT$ = ($PARAMETER$) => {
+      return (
+        <div>$END$</div>
+      );
+    };
+
+    $COMPONENT$.propTypes = {};
+    $COMPONENT$.defaultProps = {};
+
+    export default $COMPONENT$;
 
   variables:
     - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
