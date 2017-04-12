@@ -34,6 +34,9 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 
 - [Working with ReactJS in WebStorm: Coding Assistance](http://blog.jetbrains.com/webstorm/2015/10/working-with-reactjs-in-webstorm-coding-assistance/)
 
+**Tips**:
+- [How to enable spaces in ES6 imports between braces](http://stackoverflow.com/a/41920363/425256)
+
 **Documentation of available snippets:**
 
 <!--DOC_START-->
