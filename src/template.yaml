@@ -4,10 +4,8 @@
 rcls:
   description: Create a React ES2015 class
   tpl: |
-    import React, {
-      Component,
-      PropTypes,
-    } from 'react';
+    import React, { Component } from 'react';
+    import PropTypes from 'prop-types';
 
     class $COMPONENT$ extends Component {
       render() {
@@ -33,9 +31,8 @@ rpfc:
   description: Create a pure function component
   tpl:
     next: |
-      import React, {
-        PropTypes,
-      } from 'react';
+      import React from 'react';
+      import PropTypes from 'prop-types';
 
       function $COMPONENT$($PARAMETER$) {
         return (
@@ -52,7 +49,7 @@ rpfc:
       'use strict';
 
       var React = require('react');
-      var PropTypes = React.PropTypes;
+      var PropTypes = require('prop-types');
 
       function $COMPONENT$($PARAMETER$) {
         return (
@@ -72,9 +69,8 @@ rpfc:
 rpfcaf:
   description: Create a pure function component using arrow function
   tpl: |
-    import React, {
-      PropTypes,
-    } from 'react';
+    import React from 'react';
+    import PropTypes from 'prop-types';
 
     const $COMPONENT$ = ($PARAMETER$) => {
       return (
@@ -95,11 +91,11 @@ rcc:
   description: Create a React.js component
   tpl:
     next: |
-      import React, {
-        PropTypes,
-      } from 'react';
+      import React from 'react';
+      import createReactClass from 'create-react-class';
+      import PropTypes from 'prop-types';
 
-      const $COMPONENT$ = React.createClass({
+      const $COMPONENT$ = createReactClass({
         render() {
           return (
             <div>$END$</div>
@@ -113,9 +109,10 @@ rcc:
       'use strict';
 
       var React = require('react');
-      var PropTypes = React.PropTypes;
+      var createReactClass = require('create-react-class');
+      var PropTypes = require('prop-types');
 
-      var $COMPONENT$ = React.createClass({
+      var $COMPONENT$ = createReactClass({
         render: function() {
           return (
             <div>$END$</div>
@@ -144,7 +141,7 @@ rdom:
 rccc:
   description: Create a sub component
   tpl: |
-    $START$ = React.createClass({
+    $START$ = createReactClass({
       render: function() {
         return (
           $END$

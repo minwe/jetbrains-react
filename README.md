@@ -40,10 +40,8 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 ### `rcls`
 
 ```js
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class $COMPONENT$ extends Component {
   render() {
@@ -63,9 +61,8 @@ export default $COMPONENT$;
 ### `rpfc`
 
 ```js
-import React, {
-  PropTypes,
-} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function $COMPONENT$($PARAMETER$) {
   return (
@@ -86,7 +83,7 @@ export default $COMPONENT$;
 'use strict';
 
 var React = require('react');
-var PropTypes = React.PropTypes;
+var PropTypes = require('prop-types');
 
 function $COMPONENT$($PARAMETER$) {
   return (
@@ -104,9 +101,8 @@ module.exports = $COMPONENT$;
 ### `rpfcaf`
 
 ```js
-import React, {
-  PropTypes,
-} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const $COMPONENT$ = ($PARAMETER$) => {
   return (
@@ -124,11 +120,11 @@ export default $COMPONENT$;
 ### `rcc`
 
 ```js
-import React, {
-  PropTypes,
-} from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
 
-const $COMPONENT$ = React.createClass({
+const $COMPONENT$ = createReactClass({
   render() {
     return (
       <div>$END$</div>
@@ -146,9 +142,10 @@ export default $COMPONENT$;
 'use strict';
 
 var React = require('react');
-var PropTypes = React.PropTypes;
+var createReactClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
-var $COMPONENT$ = React.createClass({
+var $COMPONENT$ = createReactClass({
   render: function() {
     return (
       <div>$END$</div>
@@ -179,7 +176,7 @@ $END$
 ### `rccc`
 
 ```js
-$START$ = React.createClass({
+$START$ = createReactClass({
   render() {
     return (
       $END$
@@ -192,7 +189,7 @@ $START$ = React.createClass({
 ### `rccc5`
 
 ```js
-$START$ = React.createClass({
+$START$ = createReactClass({
   render: function() {
     return (
       $END$
