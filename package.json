@@ -1,6 +1,6 @@
 {
   "name": "jetbrains-react",
-  "version": "2.6.1",
+  "version": "3.0.0",
   "description": "React snippets(live templates) for JetBrains series editors.",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Minwe/jetbrains-react#readme",
   "devDependencies": {
-    "handlebars": "^4.0.5",
-    "js-yaml": "^3.6.1"
+    "handlebars": "^4.0.6",
+    "js-yaml": "^3.8.3"
   }
 }
