@@ -1,7 +1,7 @@
 <templateSet group="ReactJS">
   <template
       name="rcls"
-      value="import React, {&#10;  Component,&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;class $COMPONENT$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      value="import React, { Component } from &apos;react&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;class $COMPONENT$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a React ES2015 class"
       toReformat="true"
       toShortenFQNames="true">
@@ -15,7 +15,7 @@
   </template>
   <template
       name="rpfc"
-      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      value="import React from &apos;react&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a pure function component"
       toReformat="true"
       toShortenFQNames="true">
@@ -30,7 +30,7 @@
   </template>
   <template
       name="rpfc5"
-      value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var PropTypes = React.PropTypes;&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;module.exports = $COMPONENT$;&#10;"
+      value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var PropTypes = require(&apos;prop-types&apos;);&#10;&#10;function $COMPONENT$($PARAMETER$) {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;module.exports = $COMPONENT$;&#10;"
       description="React: Create a pure function component"
       toReformat="true"
       toShortenFQNames="true">
@@ -45,7 +45,7 @@
   </template>
   <template
       name="rpfcaf"
-      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;const $COMPONENT$ = ($PARAMETER$) =&gt; {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      value="import React from &apos;react&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;const $COMPONENT$ = ($PARAMETER$) =&gt; {&#10;  return (&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a pure function component using arrow function"
       toReformat="true"
       toShortenFQNames="true">
@@ -60,7 +60,7 @@
   </template>
   <template
       name="rcc"
-      value="import React, {&#10;  PropTypes,&#10;} from &apos;react&apos;;&#10;&#10;const $COMPONENT$ = React.createClass({&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $COMPONENT$;&#10;"
+      value="import React from &apos;react&apos;;&#10;import createReactClass from &apos;create-react-class&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;const $COMPONENT$ = createReactClass({&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a React.js component"
       toReformat="true"
       toShortenFQNames="true">
@@ -74,7 +74,7 @@
   </template>
   <template
       name="rcc5"
-      value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var PropTypes = React.PropTypes;&#10;&#10;var $COMPONENT$ = React.createClass({&#10;  render: function() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;module.exports = $COMPONENT$;&#10;"
+      value="&apos;use strict&apos;;&#10;&#10;var React = require(&apos;react&apos;);&#10;var createReactClass = require(&apos;create-react-class&apos;);&#10;var PropTypes = require(&apos;prop-types&apos;);&#10;&#10;var $COMPONENT$ = createReactClass({&#10;  render: function() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;});&#10;&#10;module.exports = $COMPONENT$;&#10;"
       description="React: Create a React.js component"
       toReformat="true"
       toShortenFQNames="true">
@@ -114,7 +114,7 @@
   </template>
   <template
       name="rccc"
-      value="$START$ = React.createClass({&#10;  render() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
+      value="$START$ = createReactClass({&#10;  render() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
       description="React: Create a sub component"
       toReformat="true"
       toShortenFQNames="true">
@@ -128,7 +128,7 @@
   </template>
   <template
       name="rccc5"
-      value="$START$ = React.createClass({&#10;  render: function() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
+      value="$START$ = createReactClass({&#10;  render: function() {&#10;    return (&#10;      $END$&#10;    );&#10;  }&#10;});&#10;"
       description="React: Create a sub component"
       toReformat="true"
       toShortenFQNames="true">
