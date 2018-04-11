@@ -645,6 +645,20 @@
     </context>
   </template>
   <template
+      name="st"
+      value="state = {&#10;  $START$: $END$,&#10;},&#10;"
+      description="React: state"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="sdn"
       value="static displayName = &apos;$END$&apos;;"
       description="React: static displayName"
@@ -706,6 +720,19 @@
       toReformat="true"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="sgds"
+      value="static getDerivedStateFromProps(nextProps, nextContext) {&#10;  $END$&#10;},&#10;"
+      description="React: static getDerivedStateFromProps"
+      toReformat="true"
+      toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
