@@ -524,6 +524,15 @@ getChildContext: function() {
 
 ```
 
+### `st`
+
+```js
+state = {
+  $START$: $END$,
+},
+
+```
+
 ### `sdn`
 
 ```js
@@ -563,6 +572,15 @@ static contextTypes = {
 static childContextTypes = {
   $START$: PropTypes.$END$,
 };
+
+```
+
+### `sgds`
+
+```js
+static getDerivedStateFromProps(nextProps, nextContext) {
+  $END$
+},
 
 ```
 

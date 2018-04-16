@@ -353,6 +353,16 @@ gcc:
   variables:
     - {name: 'START'}
 
+# state
+st:
+  description: state
+  tpl: |
+    state = {
+      $START$: $END$,
+    },
+
+  variables:
+    - {name: 'START'}
 
 # static
 # https://babeljs.io/blog/2015/06/07/react-on-es6-plus
@@ -404,6 +414,14 @@ scct:
 
   variables:
     - {name: 'START'}
+
+# static getDerivedStateFromProps
+sgds:
+  description: static getDerivedStateFromProps
+  tpl: |
+    static getDerivedStateFromProps(nextProps, nextContext) {
+      $END$
+    },
 
 # constructor
 cstt:
