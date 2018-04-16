@@ -1,8 +1,22 @@
 <templateSet group="ReactJS">
   <template
       name="rcls"
-      value="import React, { Component } from &apos;react&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;class $COMPONENT$ extends Component {&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;$COMPONENT$.propTypes = {};&#10;$COMPONENT$.defaultProps = {};&#10;&#10;export default $COMPONENT$;&#10;"
+      value="class $COMPONENT$ extends PureComponent {&#10;  static defaultProps = {&#10;    $START$&#10;  };&#10;&#10;  static propTypes = {&#10;  };&#10;&#10;  state = {&#10;  };&#10;&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;export default $COMPONENT$;&#10;"
       description="React: Create a React ES2015 class"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="COMPONENT" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rpc"
+      value="import React, { PureComponent } from &apos;react&apos;;&#10;import PropTypes from &apos;prop-types&apos;;&#10;&#10;class $COMPONENT$ extends PureComponent {&#10;  static defaultProps = {&#10;    $START$&#10;  };&#10;&#10;  static propTypes = {&#10;  };&#10;&#10;  render() {&#10;    return (&#10;      &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;  }&#10;}&#10;&#10;export default $COMPONENT$;&#10;"
+      description="React: Create a PureComponent"
       toReformat="true"
       toShortenFQNames="true">
     <variable name="COMPONENT" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
@@ -168,7 +182,7 @@
   </template>
   <template
       name="cdu"
-      value="componentDidUpdate(prevProps, prevState, prevContext) {&#10;  $END$&#10;}&#10;"
+      value="componentDidUpdate(prevProps, prevState) {&#10;  $END$&#10;}&#10;"
       description="React: componentDidUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -181,7 +195,7 @@
   </template>
   <template
       name="cdu5"
-      value="componentDidUpdate: function(prevProps, prevState, prevContext) {&#10;  $END$&#10;},&#10;"
+      value="componentDidUpdate: function(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
       description="React: componentDidUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -219,8 +233,34 @@
     </context>
   </template>
   <template
+      name="uscwm"
+      value="UNSAFE_componentWillMount() {&#10;  $END$&#10;}&#10;"
+      description="React: UNSAFE_componentWillMount()"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="uscwm5"
+      value="UNSAFE_componentWillMount: function() {&#10;  $END$&#10;},&#10;"
+      description="React: UNSAFE_componentWillMount()"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="cwr"
-      value="componentWillReceiveProps(nextProps, nextContext) {&#10;  $END$&#10;}&#10;"
+      value="componentWillReceiveProps(nextProps) {&#10;  $END$&#10;}&#10;"
       description="React: componentWillReceiveProps"
       toReformat="true"
       toShortenFQNames="true">
@@ -233,7 +273,7 @@
   </template>
   <template
       name="cwr5"
-      value="componentWillReceiveProps: function(nextProps, nextContext) {&#10;  $END$&#10;},&#10;"
+      value="componentWillReceiveProps: function(nextProps) {&#10;  $END$&#10;},&#10;"
       description="React: componentWillReceiveProps"
       toReformat="true"
       toShortenFQNames="true">
@@ -245,8 +285,60 @@
     </context>
   </template>
   <template
+      name="uscwr"
+      value="UNSAFE_componentWillReceiveProps(nextProps) {&#10;  $END$&#10;}&#10;"
+      description="React: UNSAFE_componentWillReceiveProps"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="uscwr5"
+      value="UNSAFE_componentWillReceiveProps: function(nextProps) {&#10;  $END$&#10;},&#10;"
+      description="React: UNSAFE_componentWillReceiveProps"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="uscwu"
+      value="UNSAFE_componentWillUpdate(nextProps, nextState) {&#10;  $END$&#10;}&#10;"
+      description="React: UNSAFE_componentWillUpdate"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="uscwu5"
+      value="UNSAFE_componentWillUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
+      description="React: UNSAFE_componentWillUpdate"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="cwu"
-      value="componentWillUpdate(nextProps, nextState, nextContext) {&#10;  $END$&#10;}&#10;"
+      value="componentWillUpdate(nextProps, nextState) {&#10;  $END$&#10;}&#10;"
       description="React: componentWillUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -259,7 +351,7 @@
   </template>
   <template
       name="cwu5"
-      value="componentWillUpdate: function(nextProps, nextState, nextContext) {&#10;  $END$&#10;},&#10;"
+      value="componentWillUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
       description="React: componentWillUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -287,6 +379,58 @@
       name="cwum5"
       value="componentWillUnmount: function() {&#10;  $END$&#10;},&#10;"
       description="React: componentWillUnmount"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gsbu"
+      value="getSnapshotBeforeUpdate(prevProps, prevState) {&#10;  $END$&#10;}&#10;"
+      description="React: getSnapshotBeforeUpdate"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="gsbu5"
+      value="getSnapshotBeforeUpdate: function(prevProps, prevState) {&#10;  $END$&#10;},&#10;"
+      description="React: getSnapshotBeforeUpdate"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdc"
+      value="componentDidCatch() {&#10;  $END$&#10;}&#10;"
+      description="React: componentDidCatch"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="cdc5"
+      value="componentDidCatch: function() {&#10;  $END$&#10;},&#10;"
+      description="React: componentDidCatch"
       toReformat="true"
       toShortenFQNames="true">
     <context>
@@ -340,6 +484,47 @@
       name="rfdn"
       value="ReactDOM.findDOMNode($END$);"
       description="React: ReactDOM.findDOMNode"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rcp"
+      value="ReactDOM.createPortal($START$, $END$);"
+      description="React: ReactDOM.createPortal"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rhy"
+      value="ReactDOM.hydrate($START$, $END$);"
+      description="React: ReactDOM.hydrate"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rucan"
+      value="ReactDOM.unmountComponentAtNode($END$);"
+      description="React: ReactDOM.unmountComponentAtNode"
       toReformat="true"
       toShortenFQNames="true">
     <context>
@@ -443,6 +628,19 @@
     </context>
   </template>
   <template
+      name="dprp"
+      value="const { $END$ } = this.props;"
+      description="React: const { $END$ } = this.props;"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="dsih"
       value="dangerouslySetInnerHTML={{__html: &apos;$END$&apos;}}"
       description="React: dangerouslySetInnerHTML"
@@ -524,7 +722,7 @@
   </template>
   <template
       name="scu"
-      value="shouldComponentUpdate(nextProps, nextState, nextContext) {&#10;  $END$&#10;}&#10;"
+      value="shouldComponentUpdate(nextProps, nextState) {&#10;  $END$&#10;}&#10;"
       description="React: shouldComponentUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -537,7 +735,7 @@
   </template>
   <template
       name="scu5"
-      value="shouldComponentUpdate: function(nextProps, nextState, nextContext) {&#10;  $END$&#10;},&#10;"
+      value="shouldComponentUpdate: function(nextProps, nextState) {&#10;  $END$&#10;},&#10;"
       description="React: shouldComponentUpdate"
       toReformat="true"
       toShortenFQNames="true">
@@ -563,9 +761,35 @@
     </context>
   </template>
   <template
+      name="fsst"
+      value="this.setState((prevState) =&gt; {&#10;  return $END$;&#10;});;&#10;"
+      description="React: functional setState"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
       name="state"
       value="this.state.$END$"
       description="React: this.state.$END$"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="dst"
+      value="const { $END$ } = this.state;"
+      description="React: const { $END$ } = this.state;"
       toReformat="true"
       toShortenFQNames="true">
     <context>
@@ -729,7 +953,7 @@
   </template>
   <template
       name="sgds"
-      value="static getDerivedStateFromProps(nextProps, nextContext) {&#10;  $END$&#10;},&#10;"
+      value="static getDerivedStateFromProps(nextProps, prevState) {&#10;  $END$&#10;},&#10;"
       description="React: static getDerivedStateFromProps"
       toReformat="true"
       toShortenFQNames="true">
@@ -742,8 +966,8 @@
   </template>
   <template
       name="cstt"
-      value="constructor(props, context$START$) {&#10;  super(props, context$END$);&#10;}&#10;"
-      description="React: constructor(props, context)"
+      value="constructor(props$START$) {&#10;  super(props$END$);&#10;}&#10;"
+      description="React: constructor(props)"
       toReformat="true"
       toShortenFQNames="true">
     <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
@@ -836,6 +1060,189 @@
       name="tsat"
       value="transitionAppearTimeout={$END$}"
       description="React: transitionAppearTimeout"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdoms"
+      value="import ReactDOMServer from &apos;react-dom/server&apos;;&#10;$END$&#10;"
+      description="React: import ReactDOMServer"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdoms5"
+      value="var ReactDOMServer = require(&apos;react-dom/server&apos;);&#10;$END$&#10;"
+      description="React: import ReactDOMServer"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdsrts"
+      value="ReactDOMServer.renderToString($END$);"
+      description="React: ReactDOMServer.renderToString"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdsrtsm"
+      value="ReactDOMServer.renderToString($END$);"
+      description="React: ReactDOMServer.renderToStaticMarkup($END$)"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdsrtns"
+      value="ReactDOMServer.renderToNodeStream($END$);"
+      description="React: ReactDOMServer.renderToNodeStream"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rdsrtsns"
+      value="ReactDOMServer.renderToStaticNodeStream($END$);"
+      description="React: ReactDOMServer.renderToStaticNodeStream"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rsm"
+      value="&lt;React.StrictMode&gt;&#10;  $END$&#10;&lt;/React.StrictMode&gt;&#10;"
+      description="React: React.StrictMode"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rf"
+      value="&lt;React.Fragment&gt;&#10;  $END$&#10;&lt;/React.Fragment&gt;&#10;"
+      description="React: React.Fragment"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rfs"
+      value="&lt;&gt;&#10;  $END$&#10;&lt;/&gt;&#10;"
+      description="React: React.Fragment"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rcr"
+      value="React.createRef();"
+      description="React: React.createRef()"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rfr"
+      value="React.forwardRef((props, ref) =&gt; {&#10;  return $END$;&#10;});&#10;"
+      description="React: React.forwardRef"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="rcctx"
+      value="const { Provider, Consumer } = React.createContext($END$);&#10;"
+      description="React: React.createContext"
+      toReformat="true"
+      toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ctxprvd"
+      value="&lt;Provider value={$START$}&gt;&#10;  $END$&#10;&lt;/Provider&gt;&#10;"
+      description="React: React context Provider"
+      toReformat="true"
+      toShortenFQNames="true">
+    <variable name="START" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template
+      name="ctxcsm"
+      value="&lt;Consumer&gt;&#10;  {value =&gt; $END$}&#10;&lt;/Consumer&gt;&#10;"
+      description="React: React context Consumer"
       toReformat="true"
       toShortenFQNames="true">
     <context>

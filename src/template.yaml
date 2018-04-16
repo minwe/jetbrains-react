@@ -1,13 +1,20 @@
 # Create component
 
-# https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#plain-javascript-classes
+# https://babeljs.io/blog/2015/06/07/react-on-es6-plus
 rcls:
   description: Create a React ES2015 class
   tpl: |
-    import React, { Component } from 'react';
-    import PropTypes from 'prop-types';
+    class $COMPONENT$ extends PureComponent {
+      static defaultProps = {
+        $START$
+      };
 
-    class $COMPONENT$ extends Component {
+      static propTypes = {
+      };
+
+      state = {
+      };
+
       render() {
         return (
           <div>$END$</div>
@@ -15,8 +22,31 @@ rcls:
       }
     }
 
-    $COMPONENT$.propTypes = {};
-    $COMPONENT$.defaultProps = {};
+    export default $COMPONENT$;
+
+  variables:
+    - {name: 'COMPONENT', expression: 'fileNameWithoutExtension()'}
+
+rpc:
+  description: Create a PureComponent
+  tpl: |
+    import React, { PureComponent } from 'react';
+    import PropTypes from 'prop-types';
+
+    class $COMPONENT$ extends PureComponent {
+      static defaultProps = {
+        $START$
+      };
+
+      static propTypes = {
+      };
+
+      render() {
+        return (
+          <div>$END$</div>
+        );
+      }
+    }
 
     export default $COMPONENT$;
 
@@ -164,7 +194,7 @@ cdm:
 cdu:
   description: componentDidUpdate
   tpl: |
-    componentDidUpdate: function(prevProps, prevState, prevContext) {
+    componentDidUpdate: function(prevProps, prevState) {
       $END$
     },
 
@@ -176,19 +206,43 @@ cwm:
       $END$
     },
 
+# UNSAFE_cwm
+uscwm:
+  description: UNSAFE_componentWillMount()
+  tpl: |
+    UNSAFE_componentWillMount: function() {
+      $END$
+    },
+
 # cwr
 cwr:
   description: componentWillReceiveProps
   tpl: |
-    componentWillReceiveProps: function(nextProps, nextContext) {
+    componentWillReceiveProps: function(nextProps) {
       $END$
     },
 
-#cwu
+# UNSAFE_componentWillReceiveProps
+uscwr:
+  description: UNSAFE_componentWillReceiveProps
+  tpl: |
+    UNSAFE_componentWillReceiveProps: function(nextProps) {
+      $END$
+    },
+
+# UNSAFE_componentWillUpdate
+uscwu:
+  description: UNSAFE_componentWillUpdate
+  tpl: |
+    UNSAFE_componentWillUpdate: function(nextProps, nextState) {
+      $END$
+    },
+
+# cwu
 cwu:
   description: componentWillUpdate
   tpl: |
-    componentWillUpdate: function(nextProps, nextState, nextContext) {
+    componentWillUpdate: function(nextProps, nextState) {
       $END$
     },
 
@@ -197,6 +251,22 @@ cwum:
   description: componentWillUnmount
   tpl: |
     componentWillUnmount: function() {
+      $END$
+    },
+
+# getSnapshotBeforeUpdate
+gsbu:
+  description: getSnapshotBeforeUpdate
+  tpl: |
+    getSnapshotBeforeUpdate: function(prevProps, prevState) {
+      $END$
+    },
+
+# componentDidCatch
+cdc:
+  description: componentDidCatch
+  tpl: |
+    componentDidCatch: function() {
       $END$
     },
 
@@ -219,6 +289,22 @@ fdn:
 rfdn:
   description: ReactDOM.findDOMNode
   tpl: ReactDOM.findDOMNode($END$);
+
+rcp:
+  description: ReactDOM.createPortal
+  tpl: ReactDOM.createPortal($START$, $END$);
+  variables:
+    - {name: 'START'}
+
+rhy:
+  description: ReactDOM.hydrate
+  tpl: ReactDOM.hydrate($START$, $END$);
+  variables:
+    - {name: 'START'}
+
+rucan:
+  description: ReactDOM.unmountComponentAtNode
+  tpl: ReactDOM.unmountComponentAtNode($END$);
 
 fup:
   description: forceUpdate();
@@ -254,6 +340,10 @@ ism:
 #
 props:
   tpl: this.props
+
+# destructuring props
+dprp:
+  tpl: const { $END$ } = this.props;
 
 # set inner HTML
 dsih:
@@ -295,7 +385,7 @@ ren:
 scu:
   description: shouldComponentUpdate
   tpl: |
-    shouldComponentUpdate: function(nextProps, nextState, nextContext) {
+    shouldComponentUpdate: function(nextProps, nextState) {
       $END$
     },
 
@@ -309,9 +399,21 @@ sst:
   variables:
     - {name: 'START'}
 
+# f sst
+fsst:
+  description: functional setState
+  tpl: |
+    this.setState((prevState) => {
+      return $END$;
+    });;
+
 #
 state:
   tpl: this.state.$END$
+
+# destructuring state
+dst:
+  tpl: const { $END$ } = this.state;
 
 # context
 ct:
@@ -419,16 +521,16 @@ scct:
 sgds:
   description: static getDerivedStateFromProps
   tpl: |
-    static getDerivedStateFromProps(nextProps, nextContext) {
+    static getDerivedStateFromProps(nextProps, prevState) {
       $END$
     },
 
 # constructor
 cstt:
-  description: constructor(props, context)
+  description: constructor(props)
   tpl: |
-    constructor(props, context$START$) {
-      super(props, context$END$);
+    constructor(props$START$) {
+      super(props$END$);
     }
 
   variables:
@@ -462,3 +564,90 @@ tslt:
 tsat:
   description: transitionAppearTimeout
   tpl: transitionAppearTimeout={$END$}
+
+### ReactDOMServer ###
+rdoms:
+  description: import ReactDOMServer
+  tpl:
+    next: |
+      import ReactDOMServer from 'react-dom/server';
+      $END$
+
+    es5: |
+      var ReactDOMServer = require('react-dom/server');
+      $END$
+
+rdsrts:
+  description: ReactDOMServer.renderToString
+  tpl: ReactDOMServer.renderToString($END$);
+
+rdsrtsm:
+  description: ReactDOMServer.renderToStaticMarkup($END$)
+  tpl: ReactDOMServer.renderToString($END$);
+
+rdsrtns:
+  description: ReactDOMServer.renderToNodeStream
+  tpl: ReactDOMServer.renderToNodeStream($END$);
+
+rdsrtsns:
+  description: ReactDOMServer.renderToStaticNodeStream
+  tpl: ReactDOMServer.renderToStaticNodeStream($END$);
+
+rsm:
+  description: React.StrictMode
+  tpl: |
+    <React.StrictMode>
+      $END$
+    </React.StrictMode>
+
+# Fragments
+rf:
+  description: React.Fragment
+  tpl: |
+    <React.Fragment>
+      $END$
+    </React.Fragment>
+
+# Fragments Short Syntax
+rfs:
+  description: React.Fragment
+  tpl: |
+    <>
+      $END$
+    </>
+
+# Ref
+# createRef
+rcr:
+  description: React.createRef()
+  tpl: React.createRef();
+
+# Forwarding Refs
+rfr:
+  description: React.forwardRef
+  tpl: |
+    React.forwardRef((props, ref) => {
+      return $END$;
+    });
+
+#  Context
+rcctx:
+  description: React.createContext
+  tpl: |
+    const { Provider, Consumer } = React.createContext($END$);
+
+ctxprvd:
+  description: React context Provider
+  tpl: |
+    <Provider value={$START$}>
+      $END$
+    </Provider>
+  variables:
+    - {name: 'START'}
+
+ctxcsm:
+  description: React context Consumer
+  tpl: |
+    <Consumer>
+      {value => $END$}
+    </Consumer>

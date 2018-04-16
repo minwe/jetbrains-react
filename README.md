@@ -43,10 +43,17 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 ### `rcls`
 
 ```js
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+class $COMPONENT$ extends PureComponent {
+  static defaultProps = {
+    $START$
+  };
 
-class $COMPONENT$ extends Component {
+  static propTypes = {
+  };
+
+  state = {
+  };
+
   render() {
     return (
       <div>$END$</div>
@@ -54,8 +61,30 @@ class $COMPONENT$ extends Component {
   }
 }
 
-$COMPONENT$.propTypes = {};
-$COMPONENT$.defaultProps = {};
+export default $COMPONENT$;
+
+```
+
+### `rpc`
+
+```js
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+
+class $COMPONENT$ extends PureComponent {
+  static defaultProps = {
+    $START$
+  };
+
+  static propTypes = {
+  };
+
+  render() {
+    return (
+      <div>$END$</div>
+    );
+  }
+}
 
 export default $COMPONENT$;
 
@@ -223,7 +252,7 @@ componentDidMount: function() {
 ### `cdu`
 
 ```js
-componentDidUpdate(prevProps, prevState, prevContext) {
+componentDidUpdate(prevProps, prevState) {
   $END$
 }
 
@@ -232,7 +261,7 @@ componentDidUpdate(prevProps, prevState, prevContext) {
 ### `cdu5`
 
 ```js
-componentDidUpdate: function(prevProps, prevState, prevContext) {
+componentDidUpdate: function(prevProps, prevState) {
   $END$
 },
 
@@ -256,10 +285,28 @@ componentWillMount: function() {
 
 ```
 
+### `uscwm`
+
+```js
+UNSAFE_componentWillMount() {
+  $END$
+}
+
+```
+
+### `uscwm5`
+
+```js
+UNSAFE_componentWillMount: function() {
+  $END$
+},
+
+```
+
 ### `cwr`
 
 ```js
-componentWillReceiveProps(nextProps, nextContext) {
+componentWillReceiveProps(nextProps) {
   $END$
 }
 
@@ -268,7 +315,43 @@ componentWillReceiveProps(nextProps, nextContext) {
 ### `cwr5`
 
 ```js
-componentWillReceiveProps: function(nextProps, nextContext) {
+componentWillReceiveProps: function(nextProps) {
+  $END$
+},
+
+```
+
+### `uscwr`
+
+```js
+UNSAFE_componentWillReceiveProps(nextProps) {
+  $END$
+}
+
+```
+
+### `uscwr5`
+
+```js
+UNSAFE_componentWillReceiveProps: function(nextProps) {
+  $END$
+},
+
+```
+
+### `uscwu`
+
+```js
+UNSAFE_componentWillUpdate(nextProps, nextState) {
+  $END$
+}
+
+```
+
+### `uscwu5`
+
+```js
+UNSAFE_componentWillUpdate: function(nextProps, nextState) {
   $END$
 },
 
@@ -277,7 +360,7 @@ componentWillReceiveProps: function(nextProps, nextContext) {
 ### `cwu`
 
 ```js
-componentWillUpdate(nextProps, nextState, nextContext) {
+componentWillUpdate(nextProps, nextState) {
   $END$
 }
 
@@ -286,7 +369,7 @@ componentWillUpdate(nextProps, nextState, nextContext) {
 ### `cwu5`
 
 ```js
-componentWillUpdate: function(nextProps, nextState, nextContext) {
+componentWillUpdate: function(nextProps, nextState) {
   $END$
 },
 
@@ -305,6 +388,42 @@ componentWillUnmount() {
 
 ```js
 componentWillUnmount: function() {
+  $END$
+},
+
+```
+
+### `gsbu`
+
+```js
+getSnapshotBeforeUpdate(prevProps, prevState) {
+  $END$
+}
+
+```
+
+### `gsbu5`
+
+```js
+getSnapshotBeforeUpdate: function(prevProps, prevState) {
+  $END$
+},
+
+```
+
+### `cdc`
+
+```js
+componentDidCatch() {
+  $END$
+}
+
+```
+
+### `cdc5`
+
+```js
+componentDidCatch: function() {
   $END$
 },
 
@@ -332,6 +451,24 @@ findDOMNode($END$);
 
 ```js
 ReactDOM.findDOMNode($END$);
+```
+
+### `rcp`
+
+```js
+ReactDOM.createPortal($START$, $END$);
+```
+
+### `rhy`
+
+```js
+ReactDOM.hydrate($START$, $END$);
+```
+
+### `rucan`
+
+```js
+ReactDOM.unmountComponentAtNode($END$);
 ```
 
 ### `fup`
@@ -396,6 +533,12 @@ isMounted()
 this.props
 ```
 
+### `dprp`
+
+```js
+const { $END$ } = this.props;
+```
+
 ### `dsih`
 
 ```js
@@ -448,7 +591,7 @@ render: function() {
 ### `scu`
 
 ```js
-shouldComponentUpdate(nextProps, nextState, nextContext) {
+shouldComponentUpdate(nextProps, nextState) {
   $END$
 }
 
@@ -457,7 +600,7 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 ### `scu5`
 
 ```js
-shouldComponentUpdate: function(nextProps, nextState, nextContext) {
+shouldComponentUpdate: function(nextProps, nextState) {
   $END$
 },
 
@@ -472,10 +615,25 @@ this.setState({
 
 ```
 
+### `fsst`
+
+```js
+this.setState((prevState) => {
+  return $END$;
+});;
+
+```
+
 ### `state`
 
 ```js
 this.state.$END$
+```
+
+### `dst`
+
+```js
+const { $END$ } = this.state;
 ```
 
 ### `ct`
@@ -578,7 +736,7 @@ static childContextTypes = {
 ### `sgds`
 
 ```js
-static getDerivedStateFromProps(nextProps, nextContext) {
+static getDerivedStateFromProps(nextProps, prevState) {
   $END$
 },
 
@@ -587,8 +745,8 @@ static getDerivedStateFromProps(nextProps, nextContext) {
 ### `cstt`
 
 ```js
-constructor(props, context$START$) {
-  super(props, context$END$);
+constructor(props$START$) {
+  super(props$END$);
 }
 
 ```
@@ -633,6 +791,113 @@ transitionLeaveTimeout={$END$}
 
 ```js
 transitionAppearTimeout={$END$}
+```
+
+### `rdoms`
+
+```js
+import ReactDOMServer from 'react-dom/server';
+$END$
+
+```
+
+### `rdoms5`
+
+```js
+var ReactDOMServer = require('react-dom/server');
+$END$
+
+```
+
+### `rdsrts`
+
+```js
+ReactDOMServer.renderToString($END$);
+```
+
+### `rdsrtsm`
+
+```js
+ReactDOMServer.renderToString($END$);
+```
+
+### `rdsrtns`
+
+```js
+ReactDOMServer.renderToNodeStream($END$);
+```
+
+### `rdsrtsns`
+
+```js
+ReactDOMServer.renderToStaticNodeStream($END$);
+```
+
+### `rsm`
+
+```js
+<React.StrictMode>
+  $END$
+</React.StrictMode>
+
+```
+
+### `rf`
+
+```js
+<React.Fragment>
+  $END$
+</React.Fragment>
+
+```
+
+### `rfs`
+
+```js
+<>
+  $END$
+</>
+
+```
+
+### `rcr`
+
+```js
+React.createRef();
+```
+
+### `rfr`
+
+```js
+React.forwardRef((props, ref) => {
+  return $END$;
+});
+
+```
+
+### `rcctx`
+
+```js
+const { Provider, Consumer } = React.createContext($END$);
+
+```
+
+### `ctxprvd`
+
+```js
+<Provider value={$START$}>
+  $END$
+</Provider>
+
+```
+
+### `ctxcsm`
+
+```js
+<Consumer>
+  {value => $END$}
+</Consumer>
+
 ```
 
 ### `oncp`
