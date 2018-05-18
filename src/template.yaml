@@ -4,7 +4,10 @@
 rcls:
   description: Create a React ES2015 class
   tpl: |
-    class $COMPONENT$ extends PureComponent {
+    import React, { Component } from 'react';
+    import PropTypes from 'prop-types';
+
+    class $COMPONENT$ extends Component {
       static defaultProps = {
         $START$
       };
