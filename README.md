@@ -43,7 +43,10 @@ For example, to create a new React class, type `rcc` and press `Tab` or press `C
 ### `rcls`
 
 ```js
-class $COMPONENT$ extends PureComponent {
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+class $COMPONENT$ extends Component {
   static defaultProps = {
     $START$
   };
