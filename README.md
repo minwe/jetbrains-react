@@ -2,6 +2,8 @@
 
 React snippets([live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors (e.g. WebStorm, PHPStorm, IntelliJ IDEA, etc.), stolen from [sublime-react](https://github.com/reactjs/sublime-react) and [phpstorm-reactjs](https://github.com/geochatz/phpstorm-reactjs).
 
+Alternatively, you can try a collection of React snippets bundled with the IDE (*Preferences/Settings | Editor | Live Templates - React*).
+
 ## Installation
 
 ### Import Automatically
